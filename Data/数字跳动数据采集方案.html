@@ -1,0 +1,2527 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数字跳动数据采集方案 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toc2/toc2.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../chapter1/node1/README.md" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../API/">
+            
+                <a href="../API/">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/node1/README.md">
+            
+                <span>
+            
+                    
+                    测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="数字跳动数据采集方案.html">
+            
+                <a href="数字跳动数据采集方案.html">
+            
+                    
+                    数字跳动数据采集方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >数字跳动数据采集方案</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6570;&#x5B57;&#x8DF3;&#x52A8;&#x6570;&#x636E;&#x91C7;&#x96C6;&#x6587;&#x6863;">&#x6570;&#x5B57;&#x8DF3;&#x52A8;&#x6570;&#x636E;&#x91C7;&#x96C6;&#x6587;&#x6863;</h1>
+<!-- toc -->
+<ul>
+<li><a href="#&#x76EE;&#x5F55;"><strong>&#x76EE;&#x5F55;</strong></a><ul>
+<li><a href="#&#x6570;&#x5B57;&#x8DF3;&#x52A8;&#x6570;&#x8BF4;&#x4EA7;&#x54C1;"><strong>&#x6570;&#x5B57;&#x8DF3;&#x52A8;&#x6570;&#x8BF4;&#x4EA7;&#x54C1;</strong></a></li>
+<li><a href="#&#x6570;&#x636E;&#x91C7;&#x96C6;&#x89C4;&#x8303;&#x8BF4;&#x660E;&#x4E66;"><strong>&#x6570;&#x636E;&#x91C7;&#x96C6;&#x89C4;&#x8303;&#x8BF4;&#x660E;&#x4E66;</strong></a><ul>
+<li><a href="#&#x4E00;&#x57FA;&#x7840;&#x6570;&#x636E;&#x91C7;&#x96C6;">&#x4E00;.<strong>&#x57FA;&#x7840;&#x6570;&#x636E;&#x91C7;&#x96C6;</strong></a></li>
+</ul>
+</li>
+<li><a href="#1&#x89C6;&#x9891;&#x6570;&#x636E;"><strong>1.&#x89C6;&#x9891;&#x6570;&#x636E;</strong></a></li>
+<li><a href="#2-&#x8BD5;&#x9898;&#x6570;&#x636E;"><strong>2.</strong> <strong>&#x8BD5;&#x9898;&#x6570;&#x636E;</strong></a></li>
+<li><a href="#3-&#x8BFE;&#x7A0B;&#x6570;&#x636E;"><strong>3.</strong> <strong>&#x8BFE;&#x7A0B;&#x6570;&#x636E;</strong></a></li>
+<li><a href="#4-&#x7528;&#x6237;&#x6570;&#x636E;"><strong>4.</strong> <strong>&#x7528;&#x6237;&#x6570;&#x636E;</strong></a><ul>
+<li><a href="#&#x4E8C;-&#x884C;&#x4E3A;&#x6570;&#x636E;&#x91C7;&#x96C6;">&#x4E8C;&#x3001;<strong>&#x884C;&#x4E3A;&#x6570;&#x636E;&#x91C7;&#x96C6;</strong></a></li>
+</ul>
+</li>
+<li><a href="#1-&#x7528;&#x6237;&#x770B;&#x89C6;&#x9891;"><strong>1.</strong> <strong>&#x7528;&#x6237;&#x770B;&#x89C6;&#x9891;</strong></a></li>
+<li><a href="#2-&#x7528;&#x6237;&#x7B54;&#x9898;"><strong>2.</strong> <strong>&#x7528;&#x6237;&#x7B54;&#x9898;</strong></a></li>
+<li><a href="#3-&#x7528;&#x6237;&#x6CE8;&#x518C;"><strong>3.</strong> <strong>&#x7528;&#x6237;&#x6CE8;&#x518C;</strong></a></li>
+<li><a href="#4-&#x7528;&#x6237;&#x4ED8;&#x8D39;"><strong>4.</strong> <strong>&#x7528;&#x6237;&#x4ED8;&#x8D39;</strong></a></li>
+<li><a href="#5-&#x7528;&#x6237;&#x9009;&#x8BFE;"><strong>5.</strong> <strong>&#x7528;&#x6237;&#x9009;&#x8BFE;</strong></a></li>
+<li><a href="#6-&#x7528;&#x6237;&#x6D4F;&#x89C8;&#x9875;&#x9762;"><strong>6.</strong> <strong>&#x7528;&#x6237;&#x6D4F;&#x89C8;&#x9875;&#x9762;</strong></a></li>
+</ul>
+</li>
+</ul>
+<!-- toc stop -->
+<table>
+<thead>
+<tr>
+<th>&#x6587;&#x4EF6;&#x7248;&#x672C;&#xFF1A;</th>
+<th>V0.1    beta</th>
+<th>&#x6587;&#x4EF6;&#x7F16;&#x53F7;&#xFF1A;</th>
+<th>0.1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x53D1;&#x5E03;&#x65E5;&#x671F;&#xFF1A;</td>
+<td>2019-08-14</td>
+<td>&#x6279;    &#x51C6;&#xFF1A;</td>
+<td>&#x9A6C;&#x5B63;</td>
+</tr>
+<tr>
+<td>&#x7F16;    &#x5236;&#xFF1A;</td>
+<td>&#x9A6C;&#x5B63;</td>
+<td>&#x5BA1;    &#x6838;&#xFF1A;</td>
+<td>&#x9A6C;&#x5B63;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4FEE;&#x8BA2;&#x8BB0;&#x5F55;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x7248;&#x672C;&#x53F7;</th>
+<th>&#x4FEE;&#x8BA2;&#x4EBA;</th>
+<th>&#x4FEE;&#x8BA2;&#x65E5;&#x671F;</th>
+<th>&#x4FEE;&#x8BA2;&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x76EE;&#x5F55;"><strong>&#x76EE;&#x5F55;</strong></h2>
+<h4 id="&#x6570;&#x5B57;&#x8DF3;&#x52A8;&#x6570;&#x8BF4;&#x4EA7;&#x54C1;"><strong>&#x6570;&#x5B57;&#x8DF3;&#x52A8;&#x6570;&#x8BF4;&#x4EA7;&#x54C1;</strong></h4>
+<h4 id="&#x6570;&#x636E;&#x91C7;&#x96C6;&#x89C4;&#x8303;&#x8BF4;&#x660E;&#x4E66;"><strong>&#x6570;&#x636E;&#x91C7;&#x96C6;&#x89C4;&#x8303;&#x8BF4;&#x660E;&#x4E66;</strong></h4>
+<h3 id="&#x4E00;&#x57FA;&#x7840;&#x6570;&#x636E;&#x91C7;&#x96C6;">&#x4E00;.<strong>&#x57FA;&#x7840;&#x6570;&#x636E;&#x91C7;&#x96C6;</strong></h3>
+<h4 id="1&#x89C6;&#x9891;&#x6570;&#x636E;"><strong>1.&#x89C6;&#x9891;&#x6570;&#x636E;</strong></h4>
+<h5 id="11-&#x63CF;&#x8FF0;"><strong>1.1</strong> <strong>&#x63CF;&#x8FF0;</strong></h5>
+<h5 id="12-&#x91C7;&#x96C6;&#x65B9;&#x5F0F;"><strong>1.2</strong> <strong>&#x91C7;&#x96C6;&#x65B9;&#x5F0F;</strong></h5>
+<p>&#x200B;      &#x540E;&#x7AEF;&#x8C03;&#x7528;&#x670D;&#x52A1;&#x65B9;&#x5F0F;&#x91C7;&#x96C6;&#x3002;</p>
+<h5 id="13-&#x91C7;&#x96C6;&#x63A5;&#x53E3;"><strong>1.3</strong> <strong>&#x91C7;&#x96C6;&#x63A5;&#x53E3;</strong></h5>
+<p>&#x6D4B;&#x8BD5;&#x73AF;&#x5883;:</p>
+<p>URL&#xFF1A;<a href="https://api/api/v1/identify" target="_blank">http://test-api/api/v1/model</a></p>
+<p>KEY&#xFF1A;&#x6570;&#x5B57;&#x8DF3;&#x52A8;&#x63D0;&#x4F9B;</p>
+<p>&#x751F;&#x4EA7;&#x73AF;&#x5883;&#xFF1A;&#x539F;&#x5B50;&#x949F;&#x63D0;&#x4F9B;</p>
+<h5 id="14-&#x8C03;&#x7528;&#x6837;&#x4F8B;java"><strong>1.4</strong> <strong>&#x8C03;&#x7528;&#x6837;&#x4F8B;(java)</strong></h5>
+<p> <img src="https://images.gitee.com/uploads/images/2019/0815/145242_349e275b_698672.png" alt="caiji" title="caiji.png"></p>
+<h5 id="15-&#x6570;&#x636E;&#x6837;&#x4F8B;"><strong>1.5</strong> <strong>&#x6570;&#x636E;&#x6837;&#x4F8B;</strong></h5>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;model&quot;</span>: <span class="hljs-string">&quot;video&quot;</span>,
+<span class="hljs-string">&quot;method&quot;</span>: <span class="hljs-string">&quot;&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;&quot;</span>,
+  <span class="hljs-string">&quot;properties&quot;</span>: {
+    <span class="hljs-string">&quot;video_id&quot;</span>: <span class="hljs-string">&quot;&#x89C6;&#x9891;&#x7F16;&#x53F7;&quot;</span>,
+    <span class="hljs-string">&quot;video_name&quot;</span>: <span class="hljs-string">&quot;&#x89C6;&#x9891;&#x540D;&#x79F0;&quot;</span>,
+    <span class="hljs-string">&quot;video_length&quot;</span>: &#x89C6;&#x9891;&#x957F;&#x5EA6;,
+    <span class="hljs-string">&quot;video_original_id&quot;</span>: <span class="hljs-string">&quot;&#x89C6;&#x9891;&#x539F;&#x59CB;&#x7F16;&#x53F7;&quot;</span>,
+    <span class="hljs-string">&quot;course_id&quot;</span>: <span class="hljs-string">&quot;&#x8BFE;&#x7A0B;&#x7F16;&#x53F7;&quot;</span>,
+    <span class="hljs-string">&quot;course_name&quot;</span>: <span class="hljs-string">&quot;&#x8BFE;&#x7A0B;&#x540D;&#x79F0;&quot;</span>,
+    <span class="hljs-string">&quot;chapter_id&quot;</span>: <span class="hljs-string">&quot;&#x7AE0;&#x8282;&#x7F16;&#x53F7;&quot;</span>,
+    <span class="hljs-string">&quot;chapter_name&quot;</span>: <span class="hljs-string">&quot;&#x7AE0;&#x8282;&#x540D;&#x79F0;&quot;</span>,
+    <span class="hljs-string">&quot;chapter_order&quot;</span>: <span class="hljs-string">&quot;&#x7AE0;&#x8282;&#x987A;&#x5E8F;&quot;</span>,
+    <span class="hljs-string">&quot;sequential_id&quot;</span>: <span class="hljs-string">&quot;&#x5C0F;&#x8282;&#x7F16;&#x53F7;&quot;</span>,
+    <span class="hljs-string">&quot;sequential_name&quot;</span>: <span class="hljs-string">&quot;&#x5C0F;&#x8282;&#x540D;&#x79F0;&quot;</span>,
+    <span class="hljs-string">&quot;sequential_order&quot;</span>: <span class="hljs-string">&quot;&#x5C0F;&#x8282;&#x987A;&#x5E8F;&quot;</span>,
+    <span class="hljs-string">&quot;vertical_id&quot;</span>: <span class="hljs-string">&quot;&#x5355;&#x5143;&#x7F16;&#x53F7;&quot;</span>,
+    <span class="hljs-string">&quot;vertical_name&quot;</span>: <span class="hljs-string">&quot;&#x5355;&#x5143;&#x540D;&#x79F0;&quot;</span>,
+    <span class="hljs-string">&quot;vertical_order&quot;</span>: <span class="hljs-string">&quot;&#x5355;&#x5143;&#x987A;&#x5E8F;&quot;</span>
+  },
+  <span class="hljs-string">&quot;timestamp&quot;</span>: <span class="hljs-string">&quot;2018-04-08T11:20:00.000Z&quot;</span>,
+  <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;model&quot;</span>
+}
+</code></pre>
+<h5 id="16-&#x683C;&#x5F0F;&#x8BF4;&#x660E;"><strong>1.6</strong> <strong>&#x683C;&#x5F0F;&#x8BF4;&#x660E;</strong></h5>
+<table>
+<thead>
+<tr>
+<th><strong>&#x5E8F;&#x53F7;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x540D;&#x79F0;</strong></th>
+<th><strong>&#x8BF4;&#x660E;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x7C7B;&#x578B;</strong></th>
+<th><strong>&#x662F;&#x5426;&#x5FC5;&#x586B;</strong></th>
+<th><strong>&#x5907;&#x6CE8;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>video_id</td>
+<td>&#x89C6;&#x9891;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x5FC5;&#x987B;&#x552F;&#x4E00;</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>video_name</td>
+<td>&#x89C6;&#x9891;&#x540D;&#x79F0;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>3.</td>
+<td>video_length</td>
+<td>&#x89C6;&#x9891;&#x957F;&#x5EA6; &#x5355;&#x4F4D;(&#x5206;)</td>
+<td>&#x6D6E;&#x70B9;</td>
+<td>Y</td>
+<td>&#x4FDD;&#x7559;&#x5C0F;&#x6570;&#x70B9;&#x540E;2&#x4F4D;</td>
+</tr>
+<tr>
+<td>4.</td>
+<td>video_original_id</td>
+<td>&#x89C6;&#x9891;&#x539F;&#x59CB;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>N</td>
+<td>&#x540C;&#x4E00;&#x89C6;&#x9891;&#x6807;&#x8BC6;</td>
+</tr>
+<tr>
+<td>5.</td>
+<td>course_id</td>
+<td>&#x8BFE;&#x7A0B;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>6.</td>
+<td>course_name</td>
+<td>&#x8BFE;&#x7A0B;&#x540D;&#x79F0;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>7.</td>
+<td>chapter_id</td>
+<td>&#x7AE0;&#x8282;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>8.</td>
+<td>chapter_name</td>
+<td>&#x7AE0;&#x8282;&#x540D;&#x79F0;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>9.</td>
+<td>chapter_order</td>
+<td>&#x7AE0;&#x8282;&#x987A;&#x5E8F;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>10.</td>
+<td>sequential_id</td>
+<td>&#x5C0F;&#x8282;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>11.</td>
+<td>sequential_name</td>
+<td>&#x5C0F;&#x8282;&#x540D;&#x79F0;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>12.</td>
+<td>sequential_order</td>
+<td>&#x5C0F;&#x8282;&#x987A;&#x5E8F;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>13.</td>
+<td>vertical_id</td>
+<td>&#x5355;&#x5143;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>14.</td>
+<td>vertical_name</td>
+<td>&#x5355;&#x5143;&#x540D;&#x79F0;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>15.</td>
+<td>vertical_order</td>
+<td>&#x5355;&#x5143;&#x987A;&#x5E8F;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>16.</td>
+<td>type</td>
+<td>&#x91C7;&#x96C6;&#x7C7B;&#x578B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#xFF1A;model</td>
+</tr>
+<tr>
+<td>17.</td>
+<td>timestamp</td>
+<td>&#x64CD;&#x4F5C;&#x65F6;&#x95F4;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x4E1A;&#x52A1;&#x53D1;&#x751F;&#x65F6;&#x95F4;ISO8601&#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>18.</td>
+<td>method</td>
+<td>&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x65B0;&#x589E;&#xFF0C;&#x4FEE;&#x6539;&#x64CD;&#x4F5C;&#x4E3A;&#x7A7A;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x586B;&#x5199;&#xFF1A;delete</td>
+</tr>
+<tr>
+<td>19.</td>
+<td>model</td>
+<td>&#x7EF4;&#x5EA6;&#x7C7B;&#x578B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#xFF1A;video</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-&#x8BD5;&#x9898;&#x6570;&#x636E;"><strong>2.</strong> <strong>&#x8BD5;&#x9898;&#x6570;&#x636E;</strong></h4>
+<h5 id="21-&#x63CF;&#x8FF0;"><strong>2.1</strong> <strong>&#x63CF;&#x8FF0;</strong></h5>
+<h5 id="22-&#x91C7;&#x96C6;&#x65B9;&#x5F0F;"><strong>2.2</strong> <strong>&#x91C7;&#x96C6;&#x65B9;&#x5F0F;</strong></h5>
+<p>&#x200B;    &#x540E;&#x7AEF;&#x8C03;&#x7528;&#x670D;&#x52A1;&#x65B9;&#x5F0F;&#x91C7;&#x96C6;&#x3002;</p>
+<h5 id="23-&#x91C7;&#x96C6;&#x63A5;&#x53E3;"><strong>2.3</strong> <strong>&#x91C7;&#x96C6;&#x63A5;&#x53E3;</strong></h5>
+<p>&#x200B;    &#x540C;&#x4E0A;</p>
+<h5 id="24-&#x8C03;&#x7528;&#x6837;&#x4F8B;java"><strong>2.4</strong> <strong>&#x8C03;&#x7528;&#x6837;&#x4F8B;(java)</strong></h5>
+<p>&#x540C;&#x4E0A;</p>
+<h5 id="25-&#x6570;&#x636E;&#x6837;&#x4F8B;"><strong>2.5</strong> <strong>&#x6570;&#x636E;&#x6837;&#x4F8B;</strong></h5>
+<pre><code>{
+  &quot;model&quot;: &quot;problem&quot;,
+&quot;method&quot;: &quot;&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;&quot;,
+  &quot;properties&quot;: {
+    &quot;problem_id&quot;: &quot;&#x9898;&#x76EE;&#x7F16;&#x53F7;&quot;,
+    &quot;problem_name&quot;: &quot;&#x9898;&#x76EE;&#x540D;&#x79F0;&quot;,
+    &quot;problem_original_id&quot;: &quot;&#x9898;&#x76EE;&#x539F;&#x59CB;&#x7F16;&#x53F7;&quot;,
+    &quot;course_id&quot;: &quot;&#x8BFE;&#x7A0B;&#x7F16;&#x53F7;&quot;,
+    &quot;course_name&quot;: &quot;&#x8BFE;&#x7A0B;&#x540D;&#x79F0;&quot;,
+    &quot;chapter_id&quot;: &quot;&#x7AE0;&#x8282;&#x7F16;&#x53F7;&quot;,
+    &quot;chapter_name&quot;: &quot;&#x7AE0;&#x8282;&#x540D;&#x79F0;&quot;,
+    &quot;chapter_order&quot;: &quot;&#x7AE0;&#x8282;&#x987A;&#x5E8F;&quot;,
+    &quot;sequential_id&quot;: &quot;&#x5C0F;&#x8282;&#x7F16;&#x53F7;&quot;,
+    &quot;sequential_name&quot;: &quot;&#x5C0F;&#x8282;&#x540D;&#x79F0;&quot;,
+    &quot;sequential_order&quot;: &quot;&#x5C0F;&#x8282;&#x987A;&#x5E8F;&quot;,
+    &quot;vertical_id&quot;: &quot;&#x5355;&#x5143;&#x7F16;&#x53F7;&quot;,
+    &quot;vertical_name&quot;: &quot;&#x5355;&#x5143;&#x540D;&#x79F0;&quot;,
+    &quot;vertical_order&quot;: &quot;&#x5355;&#x5143;&#x987A;&#x5E8F;&quot;
+  },
+  &quot;timestamp&quot;: &quot;2017-09-16T11:57:00.000Z&quot;,
+  &quot;type&quot;: &quot;model&quot;
+}
+</code></pre><h5 id="26-&#x683C;&#x5F0F;&#x8BF4;&#x660E;"><strong>2.6</strong> <strong>&#x683C;&#x5F0F;&#x8BF4;&#x660E;</strong></h5>
+<table>
+<thead>
+<tr>
+<th><strong>&#x5E8F;&#x53F7;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x540D;&#x79F0;</strong></th>
+<th><strong>&#x8BF4;&#x660E;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x7C7B;&#x578B;</strong></th>
+<th><strong>&#x662F;&#x5426;&#x5FC5;&#x586B;</strong></th>
+<th><strong>&#x5907;&#x6CE8;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>problem_id</td>
+<td>&#x9898;&#x76EE;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x5FC5;&#x987B;&#x552F;&#x4E00;</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>problem_name</td>
+<td>&#x9898;&#x76EE;&#x540D;&#x79F0;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>3.</td>
+<td>problem_original_id</td>
+<td>&#x9898;&#x76EE;&#x539F;&#x59CB;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>N</td>
+<td>&#x540C;&#x4E00;&#x8BD5;&#x9898;&#x6807;&#x8BC6;</td>
+</tr>
+<tr>
+<td>4.</td>
+<td>course_id</td>
+<td>&#x8BFE;&#x7A0B;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>5.</td>
+<td>course_name</td>
+<td>&#x8BFE;&#x7A0B;&#x540D;&#x79F0;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>6.</td>
+<td>chapter_id</td>
+<td>&#x7AE0;&#x8282;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>7.</td>
+<td>chapter_name</td>
+<td>&#x7AE0;&#x8282;&#x540D;&#x79F0;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>8.</td>
+<td>chapter_name</td>
+<td>&#x7AE0;&#x8282;&#x987A;&#x5E8F;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>9.</td>
+<td>sequential_id</td>
+<td>&#x5C0F;&#x8282;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>10.</td>
+<td>sequential_name</td>
+<td>&#x5C0F;&#x8282;&#x540D;&#x79F0;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>11.</td>
+<td>sequential_order</td>
+<td>&#x5C0F;&#x8282;&#x987A;&#x5E8F;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>12.</td>
+<td>vertical_id</td>
+<td>&#x5355;&#x5143;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>13.</td>
+<td>vertical_name</td>
+<td>&#x5355;&#x5143;&#x540D;&#x79F0;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>14.</td>
+<td>vertical_order</td>
+<td>&#x5355;&#x5143;&#x987A;&#x5E8F;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>15.</td>
+<td>type</td>
+<td>&#x91C7;&#x96C6;&#x7C7B;&#x578B;</td>
+<td></td>
+<td></td>
+<td>&#x586B;&#x5199;&#xFF1A;model</td>
+</tr>
+<tr>
+<td>16.</td>
+<td>timestamp</td>
+<td>&#x64CD;&#x4F5C;&#x65F6;&#x95F4;</td>
+<td></td>
+<td></td>
+<td>ISO8601&#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>17.</td>
+<td>method</td>
+<td>&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x65B0;&#x589E;&#xFF0C;&#x4FEE;&#x6539;&#x64CD;&#x4F5C;&#x4E3A;&#x7A7A;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x586B;&#x5199;&#xFF1A;delete</td>
+</tr>
+<tr>
+<td>18.</td>
+<td>model</td>
+<td>&#x7EF4;&#x5EA6;&#x7C7B;&#x578B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#x4E3A;problem</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-&#x8BFE;&#x7A0B;&#x6570;&#x636E;"><strong>3.</strong> <strong>&#x8BFE;&#x7A0B;&#x6570;&#x636E;</strong></h4>
+<h5 id="31-&#x63CF;&#x8FF0;"><strong>3.1</strong> <strong>&#x63CF;&#x8FF0;</strong></h5>
+<p>&#x200B;    &#x91C7;&#x96C6;&#x8BFE;&#x7A0B;&#x57FA;&#x672C;&#x5C5E;&#x6027;&#x3002;</p>
+<h5 id="32-&#x91C7;&#x96C6;&#x65B9;&#x5F0F;"><strong>3.2</strong> <strong>&#x91C7;&#x96C6;&#x65B9;&#x5F0F;</strong></h5>
+<p>&#x200B;    &#x540E;&#x7AEF;&#x8C03;&#x7528;&#x670D;&#x52A1;&#x65B9;&#x5F0F;&#x91C7;&#x96C6;&#x3002;</p>
+<h5 id="33-&#x91C7;&#x96C6;&#x63A5;&#x53E3;"><strong>3.3</strong> <strong>&#x91C7;&#x96C6;&#x63A5;&#x53E3;</strong></h5>
+<p>&#x200B;    &#x540C;&#x4E0A;</p>
+<h5 id="34-&#x8C03;&#x7528;&#x6837;&#x4F8B;java"><strong>3.4</strong> <strong>&#x8C03;&#x7528;&#x6837;&#x4F8B;</strong>(java)</h5>
+<p>&#x200B;    &#x540C;&#x4E0A;</p>
+<h5 id="35-&#x6570;&#x636E;&#x6837;&#x4F8B;"><strong>3.5</strong> <strong>&#x6570;&#x636E;&#x6837;&#x4F8B;</strong></h5>
+<pre><code>{
+  &quot;model&quot;: &quot;course&quot;,
+&quot;method&quot;: &quot;&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;&quot;,
+    &quot;properties&quot;: {
+    &quot;classdate&quot;: &quot;&#x5F00;&#x8BFE;&#x65E5;&#x671F;&quot;,
+    &quot;cost_type&quot;: &quot;&#x514D;&#x8D39;&quot;,
+    &quot;course_id&quot;: &quot;&#x8BFE;&#x7A0B;&#x7F16;&#x53F7;&quot;,
+    &quot;course_name&quot;: &quot;&#x8BFE;&#x7A0B;&#x540D;&#x79F0;&quot;,
+    &quot;course_type_level1&quot;: &quot;&#x65B0;&#x6982;&#x5FF5;&quot;,
+    &quot;course_type_level2&quot;: &quot;&#x5916;&#x6559;&quot;
+  },
+  &quot;timestamp&quot;: &quot;2017-09-16T11:57:00.000Z&quot;,
+  &quot;type&quot;: &quot;model&quot;
+}
+</code></pre><h5 id="36-&#x683C;&#x5F0F;&#x8BF4;&#x660E;"><strong>3.6</strong> <strong>&#x683C;&#x5F0F;&#x8BF4;&#x660E;</strong></h5>
+<table>
+<thead>
+<tr>
+<th><strong>&#x5E8F;&#x53F7;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x540D;&#x79F0;</strong></th>
+<th><strong>&#x8BF4;&#x660E;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x7C7B;&#x578B;</strong></th>
+<th><strong>&#x662F;&#x5426;&#x5FC5;&#x586B;</strong></th>
+<th><strong>&#x5907;&#x6CE8;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>course_id</td>
+<td>&#x8BFE;&#x7A0B;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x5FC5;&#x987B;&#x552F;&#x4E00;</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>course_name</td>
+<td>&#x8BFE;&#x7A0B;&#x540D;&#x79F0;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>3.</td>
+<td>course_type_level1</td>
+<td>&#x4E00;&#x7EA7;&#x5206;&#x7C7B;</td>
+<td>&#x6D6E;&#x70B9;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>4.</td>
+<td>course_type_level2</td>
+<td>&#x4E8C;&#x7EA7;&#x5206;&#x7C7B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>N</td>
+<td></td>
+</tr>
+<tr>
+<td>5.</td>
+<td>classdate</td>
+<td>&#x5F00;&#x8BFE;&#x65E5;&#x671F;</td>
+<td>&#x65E5;&#x671F;</td>
+<td>Y</td>
+<td>&#x683C;&#x5F0F;&#xFF1A;yyyy-mm-dd</td>
+</tr>
+<tr>
+<td>6.</td>
+<td>cost_type</td>
+<td>&#x4ED8;&#x8D39;&#x7C7B;&#x578B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x514D;&#x8D39;&#x4ED8;&#x8D39;</td>
+</tr>
+<tr>
+<td>7.</td>
+<td>type</td>
+<td>&#x91C7;&#x96C6;&#x7C7B;&#x578B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#xFF1A;model</td>
+</tr>
+<tr>
+<td>8.</td>
+<td>timestamp</td>
+<td>&#x64CD;&#x4F5C;&#x65F6;&#x95F4;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x4E1A;&#x52A1;&#x53D1;&#x751F;&#x65F6;&#x95F4;ISO8601&#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>9.</td>
+<td>method</td>
+<td>&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x65B0;&#x589E;&#xFF0C;&#x4FEE;&#x6539;&#x64CD;&#x4F5C;&#x4E3A;&#x7A7A;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x586B;&#x5199;&#xFF1A;delete</td>
+</tr>
+<tr>
+<td>10.</td>
+<td>model</td>
+<td>&#x7EF4;&#x5EA6;&#x7C7B;&#x578B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#xFF1A;course</td>
+</tr>
+</tbody>
+</table>
+<h4 id="4-&#x7528;&#x6237;&#x6570;&#x636E;"><strong>4.</strong> <strong>&#x7528;&#x6237;&#x6570;&#x636E;</strong></h4>
+<h5 id="41-&#x63CF;&#x8FF0;"><strong>4.1</strong> <strong>&#x63CF;&#x8FF0;</strong></h5>
+<p>&#x200B;    &#x91C7;&#x96C6;&#x7528;&#x6237;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x4EE5;&#x53CA;&#x6240;&#x5C5E;&#x4FE1;&#x606F;&#x3002;</p>
+<h5 id="42-&#x91C7;&#x96C6;&#x65B9;&#x5F0F;"><strong>4.2</strong> <strong>&#x91C7;&#x96C6;&#x65B9;&#x5F0F;</strong></h5>
+<p>&#x200B;    &#x540E;&#x7AEF;&#x8C03;&#x7528;&#x670D;&#x52A1;&#x65B9;&#x5F0F;&#x91C7;&#x96C6;&#x3002;</p>
+<h5 id="43-&#x91C7;&#x96C6;&#x63A5;&#x53E3;"><strong>4.3</strong> <strong>&#x91C7;&#x96C6;&#x63A5;&#x53E3;</strong></h5>
+<p>&#x200B;    &#x6D4B;&#x8BD5;&#x73AF;&#x5883;:</p>
+<p>URL&#xFF1A;<a href="https://api/api/v1/identify" target="_blank">http://test-api/api/v1/identify</a></p>
+<p>KEY&#xFF1A;8888888</p>
+<p>&#x200B;    &#x751F;&#x4EA7;&#x73AF;&#x5883;&#xFF1A;&#x5F85;&#x5206;&#x914D;</p>
+<h5 id="44-&#x8C03;&#x7528;&#x6837;&#x4F8B;java"><strong>4.4</strong> <strong>&#x8C03;&#x7528;&#x6837;&#x4F8B;(java)</strong></h5>
+<p> <img src="https://images.gitee.com/uploads/images/2019/0815/145242_349e275b_698672.png" alt="caiji" title="caiji.png"></p>
+<h5 id="45-&#x6570;&#x636E;&#x6837;&#x4F8B;"><strong>4.5</strong> <strong>&#x6570;&#x636E;&#x6837;&#x4F8B;</strong></h5>
+<pre><code>{
+&quot;context&quot;: {
+        &quot;campaign&quot;: {
+            &quot;source&quot;: &quot;&#x5E7F;&#x544A;&#x6295;&#x653E;&#x6765;&#x6E90;&quot;
+       }},
+    &quot;model&quot;: &quot;user&quot;,
+    &quot;user_id&quot;: &quot;&#x7528;&#x6237;&#x7F16;&#x53F7;&quot;
+    &quot;anonymous_id&quot;: &quot;&#x533F;&#x540D;&#x7F16;&#x53F7;&quot;,
+    &quot;method&quot;: &quot;&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;&quot;,
+    &quot;properties&quot;: {
+    &quot;user_name&quot;: &quot;&#x59D3;&#x540D;&quot;,
+    &quot;gender&quot;: &quot;&#x6027;&#x522B;&quot;,
+    &quot;birthday&quot;: &quot;&#x51FA;&#x751F;&#x65E5;&#x671F;&quot;,
+    &quot;job_title&quot;: &quot;&#x804C;&#x79F0;&quot;,
+    &quot;education&quot;: &quot;&#x7528;&#x6237;&#x5B66;&#x5386;&quot;,
+    &quot;user_type&quot;:&quot;&#x7528;&#x6237;&#x7C7B;&#x578B;&quot;,
+    &quot;role&quot;:&quot;&#x7528;&#x6237;&#x89D2;&#x8272;&quot;,
+    &quot;register_date&quot;: &quot;&#x6CE8;&#x518C;&#x65E5;&#x671F;&quot;,
+    &quot;platform&quot;: &quot;&#x7EC8;&#x7AEF;&quot;,
+    &quot;country&quot;: &quot;&#x56FD;&#x5BB6;&#x540D;&#x79F0;&quot;, 
+    &quot;province&quot;: &quot;&#x7701;&#x540D;&#x79F0;&quot;, 
+    &quot;city&quot;: &quot;&#x5E02;&#x540D;&#x79F0;&quot;, 
+    &quot;district&quot;: &quot;&#x533A;/&#x53BF;&#x540D;&#x79F0;&quot;
+  },
+  &quot;timestamp&quot;: &quot;2017-09-16T11:57:00.000Z&quot;, 
+  &quot;type&quot;: &quot;identify&quot;
+}
+</code></pre><h5 id="46-&#x683C;&#x5F0F;&#x8BF4;&#x660E;"><strong>4.6</strong> <strong>&#x683C;&#x5F0F;&#x8BF4;&#x660E;</strong></h5>
+<table>
+<thead>
+<tr>
+<th><strong>&#x5E8F;&#x53F7;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x540D;&#x79F0;</strong></th>
+<th><strong>&#x8BF4;&#x660E;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x7C7B;&#x578B;</strong></th>
+<th><strong>&#x662F;&#x5426;&#x5FC5;&#x586B;</strong></th>
+<th><strong>&#x5907;&#x6CE8;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>user_id</td>
+<td>&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x5168;&#x5C40;&#x552F;&#x4E00;</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>user_name</td>
+<td>&#x7528;&#x6237;&#x59D3;&#x540D;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>3.</td>
+<td>gender</td>
+<td>&#x6027;&#x522B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x7537;&#x5973;&#x672A;&#x77E5;</td>
+</tr>
+<tr>
+<td>4.</td>
+<td>birthday</td>
+<td>&#x51FA;&#x751F;&#x65E5;&#x671F;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>N</td>
+<td>yyyy-mm-dd</td>
+</tr>
+<tr>
+<td>5.</td>
+<td>job_title</td>
+<td>&#x804C;&#x79F0;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x521D;&#x7EA7;&#x4E2D;&#x7EA7;&#x9AD8;&#x7EA7;</td>
+</tr>
+<tr>
+<td>6.</td>
+<td>user_type</td>
+<td>&#x7528;&#x6237;&#x7C7B;&#x578B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x6CE8;&#x518C;&#x4ED8;&#x8D39;</td>
+</tr>
+<tr>
+<td>7.</td>
+<td>role</td>
+<td>&#x7528;&#x6237;&#x89D2;&#x8272;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>8.</td>
+<td>register_date</td>
+<td>&#x6CE8;&#x518C;&#x65E5;&#x671F;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>9.</td>
+<td>platform</td>
+<td>&#x7EC8;&#x7AEF;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>10.</td>
+<td>register_channel</td>
+<td>&#x6CE8;&#x518C;&#x6E20;&#x9053;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>11.</td>
+<td>education</td>
+<td>&#x7528;&#x6237;&#x5B66;&#x5386;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x521D;&#x4E2D;&#x4EE5;&#x4E0B;&#x9AD8;&#x4E2D;&#x5927;&#x5B66;&#x7855;&#x58EB;&#x535A;&#x58EB;</td>
+</tr>
+<tr>
+<td>12.</td>
+<td>country</td>
+<td>&#x56FD;&#x5BB6;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>ISO3166-1&#x7F16;&#x7801;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>13.</td>
+<td>province</td>
+<td>&#x7701;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>2017&#x6700;&#x65B0;&#x7701;&#x5E02;&#x533A;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>14.</td>
+<td>city</td>
+<td>&#x5E02;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>2017&#x6700;&#x65B0;&#x7701;&#x5E02;&#x533A;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>15.</td>
+<td>district</td>
+<td>&#x533A;/&#x53BF;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>N</td>
+<td>2017&#x6700;&#x65B0;&#x7701;&#x5E02;&#x533A;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>16.</td>
+<td>type</td>
+<td>&#x91C7;&#x96C6;&#x7C7B;&#x578B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#xFF1A;identify</td>
+</tr>
+<tr>
+<td>17.</td>
+<td>timestamp</td>
+<td>&#x64CD;&#x4F5C;&#x65F6;&#x95F4;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x4E1A;&#x52A1;&#x53D1;&#x751F;&#x65F6;&#x95F4;ISO8601&#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>18.</td>
+<td>method</td>
+<td>&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x65B0;&#x589E;&#xFF0C;&#x4FEE;&#x6539;&#x64CD;&#x4F5C;&#x4E3A;&#x7A7A;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x586B;&#x5199;&#xFF1A;delete</td>
+</tr>
+<tr>
+<td>19.</td>
+<td>source</td>
+<td>&#x5E7F;&#x544A;&#x6295;&#x653E;&#x6765;&#x6E90;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x8C03;&#x7528;js&#x63A5;&#x53E3;&#x83B7;&#x53D6;</td>
+</tr>
+<tr>
+<td>20.</td>
+<td>model</td>
+<td>&#x7EF4;&#x5EA6;&#x7C7B;&#x578B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;:user</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x4E8C;&#x3001;&#x884C;&#x4E3A;&#x6570;&#x636E;&#x91C7;&#x96C6;">&#x4E8C;&#x3001;<strong>&#x884C;&#x4E3A;&#x6570;&#x636E;&#x91C7;&#x96C6;</strong></h3>
+<h4 id="1-&#x7528;&#x6237;&#x770B;&#x89C6;&#x9891;"><strong>1.</strong> <strong>&#x7528;&#x6237;&#x770B;&#x89C6;&#x9891;</strong></h4>
+<h5 id="11-&#x64AD;&#x653E;&#x884C;&#x4E3A;"><strong>1.1</strong> <strong>&#x64AD;&#x653E;&#x884C;&#x4E3A;</strong></h5>
+<h5 id="111-&#x63CF;&#x8FF0;"><strong>1.1.1.</strong> <strong>&#x63CF;&#x8FF0;</strong></h5>
+<p>&#x91C7;&#x96C6;&#x70B9;&#x51FB;&#x64AD;&#x653E;&#x6309;&#x94AE;&#x7684;&#x884C;&#x4E3A;&#x6570;&#x636E;&#x3002;</p>
+<h5 id="112-&#x6570;&#x636E;&#x6837;&#x4F8B;"><strong>1.1.2.</strong> <strong>&#x6570;&#x636E;&#x6837;&#x4F8B;</strong></h5>
+<pre><code>{
+    &quot;user_id&quot;: &quot;&#x7528;&#x6237;&#x7F16;&#x53F7;&quot;, 
+    &quot;anonymous_id&quot;: &quot;&#x533F;&#x540D;&#x7F16;&#x53F7;&quot;, 
+    &quot;timestamp&quot;: &quot;2017-11-27T13:28:28.398446+00:00&quot;, 
+    &quot;properties&quot;: {
+    &quot;video_id&quot;: &quot;&#x89C6;&#x9891;1&quot;,     
+    &quot;course_id&quot;: &quot;001&quot;,
+    &quot;platform&quot;: &quot;&#x7EC8;&#x7AEF;&quot;,
+    &quot;position&quot;: 143.469841, 
+    &quot;is_first_play&quot;: true,
+    &quot;event_type&quot;:&quot;video&quot;
+  }, 
+  &quot;type&quot;: &quot;track&quot;, 
+  &quot;event&quot;: &quot;video.played&quot;
+}
+</code></pre><h5 id="113-&#x683C;&#x5F0F;&#x8BF4;&#x660E;"><strong>1.1.3.</strong> <strong>&#x683C;&#x5F0F;&#x8BF4;&#x660E;</strong></h5>
+<table>
+<thead>
+<tr>
+<th><strong>&#x5E8F;&#x53F7;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x540D;&#x79F0;</strong></th>
+<th><strong>&#x8BF4;&#x660E;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x7C7B;&#x578B;</strong></th>
+<th><strong>&#x662F;&#x5426;&#x5FC5;&#x586B;</strong></th>
+<th><strong>&#x5907;&#x6CE8;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>user_id</td>
+<td>&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>2.</td>
+<td>anonymous_id</td>
+<td>&#x533F;&#x540D;&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>N</td>
+<td>&#x533F;&#x540D;&#x7528;&#x6237;&#x5FC5;&#x586B;</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>video_id</td>
+<td>&#x89C6;&#x9891;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>4.</td>
+<td>course_id</td>
+<td>&#x8BFE;&#x7A0B;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>5.</td>
+<td>platform</td>
+<td>&#x7EC8;&#x7AEF;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>6.</td>
+<td>position</td>
+<td>&#x89C6;&#x9891;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;</td>
+<td>&#x6D6E;&#x70B9;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>7.</td>
+<td>is_first_play</td>
+<td>&#x662F;&#x5426;&#x7B2C;&#x4E00;&#x6B21;&#x64AD;&#x653E;</td>
+<td>&#x5E03;&#x5C14;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8.</td>
+<td>type</td>
+<td>&#x91C7;&#x96C6;&#x7C7B;&#x578B;</td>
+<td></td>
+<td></td>
+<td>&#x586B;&#x5199;&#xFF1A;track</td>
+</tr>
+<tr>
+<td>9.</td>
+<td>event_type</td>
+<td>&#x4E8B;&#x4EF6;&#x7C7B;&#x522B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#xFF1A;video</td>
+</tr>
+<tr>
+<td>10.</td>
+<td>timestamp</td>
+<td>&#x64CD;&#x4F5C;&#x65F6;&#x95F4;</td>
+<td></td>
+<td></td>
+<td>ISO8601&#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>11.</td>
+<td>event</td>
+<td>&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#x4E3A;video.played</td>
+</tr>
+</tbody>
+</table>
+<h5 id="12-&#x6682;&#x505C;&#x884C;&#x4E3A;"><strong>1.2</strong> <strong>&#x6682;&#x505C;&#x884C;&#x4E3A;</strong></h5>
+<h5 id="121-&#x63CF;&#x8FF0;"><strong>1.2.1.</strong> <strong>&#x63CF;&#x8FF0;</strong></h5>
+<h5 id="122-&#x6570;&#x636E;&#x6837;&#x4F8B;"><strong>1.2.2.</strong> <strong>&#x6570;&#x636E;&#x6837;&#x4F8B;</strong></h5>
+<pre><code>{
+    &quot;user_id&quot;: &quot;30&quot;, 
+    &quot;anonymous_id&quot;: &quot;&#x533F;&#x540D;&#x7528;&#x6237;&#x7F16;&#x53F7;&quot;, 
+    &quot;timestamp&quot;: &quot;2017-11-27T13:28:28.398446+00:00&quot;, 
+    &quot;properties&quot;: {
+    &quot;video_id&quot;: &quot;&#x89C6;&#x9891;1&quot;,
+    &quot;course_id&quot;: &quot;001&quot;,
+    &quot;platform&quot;: &quot;&#x7EC8;&#x7AEF;&quot;,
+    &quot;position&quot;: 143.469841, 
+    &quot;event_type&quot;:&quot;video&quot;
+  }, 
+  &quot;type&quot;: &quot;track&quot;, 
+  &quot;event&quot;: &quot;video.paused&quot;
+}
+</code></pre><h5 id="123-&#x683C;&#x5F0F;&#x8BF4;&#x660E;"><strong>1.2.3.</strong> <strong>&#x683C;&#x5F0F;&#x8BF4;&#x660E;</strong></h5>
+<table>
+<thead>
+<tr>
+<th><strong>&#x5E8F;&#x53F7;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x540D;&#x79F0;</strong></th>
+<th><strong>&#x8BF4;&#x660E;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x7C7B;&#x578B;</strong></th>
+<th><strong>&#x662F;&#x5426;&#x5FC5;&#x586B;</strong></th>
+<th><strong>&#x5907;&#x6CE8;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>user_id</td>
+<td>&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>2.</td>
+<td>anonymous_id</td>
+<td>&#x533F;&#x540D;&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>N</td>
+<td>&#x533F;&#x540D;&#x7528;&#x6237;&#x5FC5;&#x586B;</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>video_id</td>
+<td>&#x89C6;&#x9891;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>4.</td>
+<td>course_id</td>
+<td>&#x8BFE;&#x7A0B;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>5.</td>
+<td>platform</td>
+<td>&#x7EC8;&#x7AEF;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>6.</td>
+<td>position</td>
+<td>&#x89C6;&#x9891;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;</td>
+<td>&#x6D6E;&#x70B9;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>7.</td>
+<td>type</td>
+<td>&#x91C7;&#x96C6;&#x7C7B;&#x578B;</td>
+<td></td>
+<td></td>
+<td>&#x586B;&#x5199;&#xFF1A;track</td>
+</tr>
+<tr>
+<td>8.</td>
+<td>event_type</td>
+<td>&#x4E8B;&#x4EF6;&#x7C7B;&#x522B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#xFF1A;video</td>
+</tr>
+<tr>
+<td>9.</td>
+<td>timestamp</td>
+<td>&#x64CD;&#x4F5C;&#x65F6;&#x95F4;</td>
+<td></td>
+<td></td>
+<td>ISO8601&#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>10.</td>
+<td>event</td>
+<td>&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#x4E3A;video.paused</td>
+</tr>
+</tbody>
+</table>
+<h5 id="13-&#x52A0;&#x8F7D;&#x884C;&#x4E3A;"><strong>1.3</strong> <strong>&#x52A0;&#x8F7D;&#x884C;&#x4E3A;</strong></h5>
+<h5 id="131-&#x63CF;&#x8FF0;"><strong>1.3.1.</strong> <strong>&#x63CF;&#x8FF0;</strong></h5>
+<h5 id="132-&#x6570;&#x636E;&#x6837;&#x4F8B;"><strong>1.3.2.</strong> <strong>&#x6570;&#x636E;&#x6837;&#x4F8B;</strong></h5>
+<pre><code>{
+    &quot;user_id&quot;: &quot;30&quot;, 
+    &quot;anonymous_id&quot;: &quot;&#x533F;&#x540D;&#x7528;&#x6237;&#x7F16;&#x53F7;&quot;, 
+    &quot;timestamp&quot;: &quot;2017-11-27T13:28:28.398446+00:00&quot;, 
+    &quot;properties&quot;: {
+    &quot;video_id&quot;: &quot;&#x89C6;&#x9891;1&quot;,
+    &quot;course_id&quot;: &quot;001&quot;,
+    &quot;platform&quot;: &quot;&#x7EC8;&#x7AEF;&quot;,
+    &quot;position&quot;: 143.469841,
+    &quot;event_type&quot;:&quot;video&quot;
+  },
+  &quot;type&quot;: &quot;track&quot;, 
+  &quot;event&quot;: &quot;video.loaded&quot;
+}
+</code></pre><table>
+<thead>
+<tr>
+<th><strong>&#x5E8F;&#x53F7;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x540D;&#x79F0;</strong></th>
+<th><strong>&#x8BF4;&#x660E;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x7C7B;&#x578B;</strong></th>
+<th><strong>&#x662F;&#x5426;&#x5FC5;&#x586B;</strong></th>
+<th><strong>&#x5907;&#x6CE8;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>anonymous_id</td>
+<td>&#x533F;&#x540D;&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>N</td>
+<td>&#x533F;&#x540D;&#x7528;&#x6237;&#x5FC5;&#x586B;</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>user_id</td>
+<td>&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>3.</td>
+<td>video_id</td>
+<td>&#x89C6;&#x9891;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>4.</td>
+<td>position</td>
+<td>&#x89C6;&#x9891;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;</td>
+<td>&#x6D6E;&#x70B9;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>5.</td>
+<td>event_type</td>
+<td>&#x4E8B;&#x4EF6;&#x7C7B;&#x522B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#xFF1A;video</td>
+</tr>
+<tr>
+<td>6.</td>
+<td>type</td>
+<td>&#x91C7;&#x96C6;&#x7C7B;&#x578B;</td>
+<td></td>
+<td></td>
+<td>&#x586B;&#x5199;&#xFF1A;track</td>
+</tr>
+<tr>
+<td>7.</td>
+<td>timestamp</td>
+<td>&#x64CD;&#x4F5C;&#x65F6;&#x95F4;</td>
+<td></td>
+<td></td>
+<td>ISO8601&#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>8.</td>
+<td>event</td>
+<td>&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#x4E3A;video.loaded</td>
+</tr>
+</tbody>
+</table>
+<h5 id="133-&#x683C;&#x5F0F;&#x8BF4;&#x660E;"><strong>1.3.3.</strong> <strong>&#x683C;&#x5F0F;&#x8BF4;&#x660E;</strong></h5>
+<p><strong>1.4</strong> <strong>&#x89C6;&#x9891;&#x5FEB;&#x8FDB;&#x884C;&#x4E3A;</strong></p>
+<h5 id="141-&#x63CF;&#x8FF0;"><strong>1.4.1.</strong> <strong>&#x63CF;&#x8FF0;</strong></h5>
+<h5 id="142-&#x6570;&#x636E;&#x6837;&#x4F8B;"><strong>1.4.2.</strong> <strong>&#x6570;&#x636E;&#x6837;&#x4F8B;</strong></h5>
+<pre><code>{
+    &quot;user_id&quot;: &quot;30&quot;, 
+    &quot;anonymous_id&quot;: &quot;&#x533F;&#x540D;&#x7528;&#x6237;&#x7F16;&#x53F7;&quot;, 
+    &quot;timestamp&quot;: &quot;2017-11-27T13:28:28.398446+00:00&quot;, 
+    &quot;properties&quot;: {
+    &quot;video_id&quot;: &quot;&#x89C6;&#x9891;1&quot;, 
+    &quot;course_id&quot;: &quot;001&quot;,
+    &quot;platform&quot;: &quot;&#x7EC8;&#x7AEF;&quot;,
+    &quot;position&quot;: 1, 
+    &quot;to_position&quot;: 2, 
+    &quot;event_type&quot;:&quot;video&quot;
+  }, 
+  &quot;type&quot;: &quot;track&quot;, 
+  &quot;event&quot;: &quot;video.seeked&quot;
+}
+</code></pre><h5 id="143-&#x683C;&#x5F0F;&#x8BF4;&#x660E;"><strong>1.4.3.</strong> <strong>&#x683C;&#x5F0F;&#x8BF4;&#x660E;</strong></h5>
+<table>
+<thead>
+<tr>
+<th><strong>&#x5E8F;&#x53F7;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x540D;&#x79F0;</strong></th>
+<th><strong>&#x8BF4;&#x660E;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x7C7B;&#x578B;</strong></th>
+<th><strong>&#x662F;&#x5426;&#x5FC5;&#x586B;</strong></th>
+<th><strong>&#x5907;&#x6CE8;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>user_id</td>
+<td>&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>2.</td>
+<td>anonymous_id</td>
+<td>&#x533F;&#x540D;&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>N</td>
+<td>&#x533F;&#x540D;&#x7528;&#x6237;&#x5FC5;&#x586B;</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>video_id</td>
+<td>&#x89C6;&#x9891;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>4.</td>
+<td>course_id</td>
+<td>&#x8BFE;&#x7A0B;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>5.</td>
+<td>platform</td>
+<td>&#x7EC8;&#x7AEF;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>6.</td>
+<td>position</td>
+<td>&#x89C6;&#x9891;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;</td>
+<td>&#x6D6E;&#x70B9;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>7.</td>
+<td>to_position</td>
+<td>&#x89C6;&#x9891;&#x8DF3;&#x8F6C;&#x4F4D;&#x7F6E;</td>
+<td>&#x6D6E;&#x70B9;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>8.</td>
+<td>type</td>
+<td>&#x91C7;&#x96C6;&#x7C7B;&#x578B;</td>
+<td></td>
+<td></td>
+<td>&#x586B;&#x5199;&#xFF1A;track</td>
+</tr>
+<tr>
+<td>9.</td>
+<td>event_type</td>
+<td>&#x4E8B;&#x4EF6;&#x7C7B;&#x522B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#xFF1A;video</td>
+</tr>
+<tr>
+<td>10.</td>
+<td>timestamp</td>
+<td>&#x64CD;&#x4F5C;&#x65F6;&#x95F4;</td>
+<td></td>
+<td></td>
+<td>ISO8601&#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>11.</td>
+<td>event</td>
+<td>&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#x4E3A;video.seeked</td>
+</tr>
+</tbody>
+</table>
+<h5 id="15-&#x89C6;&#x9891;&#x505C;&#x6B62;&#x884C;&#x4E3A;"><strong>1.5</strong> <strong>&#x89C6;&#x9891;&#x505C;&#x6B62;&#x884C;&#x4E3A;</strong></h5>
+<h5 id="151-&#x63CF;&#x8FF0;"><strong>1.5.1.</strong> <strong>&#x63CF;&#x8FF0;</strong></h5>
+<h5 id="152-&#x6570;&#x636E;&#x6837;&#x4F8B;"><strong>1.5.2.</strong> <strong>&#x6570;&#x636E;&#x6837;&#x4F8B;</strong></h5>
+<pre><code>{
+    &quot;user_id&quot;: &quot;30&quot;, 
+    &quot;anonymous_id&quot;: &quot;&#x533F;&#x540D;&#x7528;&#x6237;&#x7F16;&#x53F7;&quot;, 
+    &quot;timestamp&quot;: &quot;2017-11-27T13:28:28.398446+00:00&quot;, 
+    &quot;properties&quot;: {
+    &quot;video_id&quot;: &quot;&#x89C6;&#x9891;1&quot;, 
+    &quot;course_id&quot;: &quot;001&quot;,
+    &quot;platform&quot;: &quot;&#x7EC8;&#x7AEF;&quot;,
+    &quot;position&quot;: 143.469841, 
+    &quot;event_type&quot;:&quot;video&quot;
+     }, 
+  &quot;type&quot;: &quot;track&quot;, 
+  &quot;event&quot;: &quot;video.stoped&quot;
+}
+</code></pre><h5 id="153-&#x683C;&#x5F0F;&#x8BF4;&#x660E;"><strong>1.5.3.</strong> <strong>&#x683C;&#x5F0F;&#x8BF4;&#x660E;</strong></h5>
+<table>
+<thead>
+<tr>
+<th><strong>&#x5E8F;&#x53F7;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x540D;&#x79F0;</strong></th>
+<th><strong>&#x8BF4;&#x660E;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x7C7B;&#x578B;</strong></th>
+<th><strong>&#x662F;&#x5426;&#x5FC5;&#x586B;</strong></th>
+<th><strong>&#x5907;&#x6CE8;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>user_id</td>
+<td>&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>2.</td>
+<td>anonymous_id</td>
+<td>&#x533F;&#x540D;&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>N</td>
+<td>&#x533F;&#x540D;&#x7528;&#x6237;&#x5FC5;&#x586B;</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>video_id</td>
+<td>&#x89C6;&#x9891;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>4.</td>
+<td>course_id</td>
+<td>&#x8BFE;&#x7A0B;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>5.</td>
+<td>platform</td>
+<td>&#x7EC8;&#x7AEF;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>6.</td>
+<td>position</td>
+<td>&#x89C6;&#x9891;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;</td>
+<td>&#x6D6E;&#x70B9;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>7.</td>
+<td>type</td>
+<td>&#x91C7;&#x96C6;&#x7C7B;&#x578B;</td>
+<td></td>
+<td></td>
+<td>&#x586B;&#x5199;&#xFF1A;track</td>
+</tr>
+<tr>
+<td>8.</td>
+<td>event_type</td>
+<td>&#x4E8B;&#x4EF6;&#x7C7B;&#x522B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#xFF1A;video</td>
+</tr>
+<tr>
+<td>9.</td>
+<td>timestamp</td>
+<td>&#x64CD;&#x4F5C;&#x65F6;&#x95F4;</td>
+<td></td>
+<td></td>
+<td>ISO8601&#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>10.</td>
+<td>event</td>
+<td>&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#x4E3A;video.stoped</td>
+</tr>
+</tbody>
+</table>
+<h5 id="16-&#x89C6;&#x9891;&#x4E2D;&#x65AD;&#x884C;&#x4E3A;"><strong>1.6</strong> <strong>&#x89C6;&#x9891;&#x4E2D;&#x65AD;&#x884C;&#x4E3A;</strong></h5>
+<h5 id="161-&#x63CF;&#x8FF0;"><strong>1.6.1.</strong> <strong>&#x63CF;&#x8FF0;</strong></h5>
+<h5 id="162-&#x6570;&#x636E;&#x6837;&#x4F8B;"><strong>1.6.2.</strong> <strong>&#x6570;&#x636E;&#x6837;&#x4F8B;</strong></h5>
+<pre><code>{
+    &quot;user_id&quot;: &quot;30&quot;, 
+    &quot;anonymous_id&quot;: &quot;&#x533F;&#x540D;&#x7528;&#x6237;&#x7F16;&#x53F7;&quot;, 
+    &quot;timestamp&quot;: &quot;2017-11-27T13:28:28.398446+00:00&quot;, 
+    &quot;properties&quot;: {
+    &quot;video_id&quot;: &quot;&#x89C6;&#x9891;1&quot;, 
+    &quot;course_id&quot;: &quot;001&quot;,
+    &quot;platform&quot;: &quot;&#x7EC8;&#x7AEF;&quot;,
+    &quot;position&quot;: 143.469841, 
+    &quot;method&quot;: &quot;&#x89C6;&#x9891;&#x4E2D;&#x65AD;&#x539F;&#x56E0;&quot;, 
+    &quot;event_type&quot;:&quot;video&quot;
+  }, 
+  &quot;type&quot;: &quot;track&quot;, 
+  &quot;event&quot;: &quot;video.interrupted&quot;
+}
+</code></pre><h5 id="163-&#x683C;&#x5F0F;&#x8BF4;&#x660E;"><strong>1.6.3.</strong> <strong>&#x683C;&#x5F0F;&#x8BF4;&#x660E;</strong></h5>
+<table>
+<thead>
+<tr>
+<th><strong>&#x5E8F;&#x53F7;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x540D;&#x79F0;</strong></th>
+<th><strong>&#x8BF4;&#x660E;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x7C7B;&#x578B;</strong></th>
+<th><strong>&#x662F;&#x5426;&#x5FC5;&#x586B;</strong></th>
+<th><strong>&#x5907;&#x6CE8;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>user_id</td>
+<td>&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>2.</td>
+<td>anonymous_id</td>
+<td>&#x533F;&#x540D;&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>N</td>
+<td>&#x533F;&#x540D;&#x7528;&#x6237;&#x5FC5;&#x586B;</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>video_id</td>
+<td>&#x89C6;&#x9891;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>4.</td>
+<td>course_id</td>
+<td>&#x8BFE;&#x7A0B;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>5.</td>
+<td>platform</td>
+<td>&#x7EC8;&#x7AEF;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>6.</td>
+<td>position</td>
+<td>&#x89C6;&#x9891;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;</td>
+<td>&#x6D6E;&#x70B9;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>7.</td>
+<td>type</td>
+<td>&#x91C7;&#x96C6;&#x7C7B;&#x578B;</td>
+<td></td>
+<td></td>
+<td>&#x586B;&#x5199;&#xFF1A;track</td>
+</tr>
+<tr>
+<td>8.</td>
+<td>event_type</td>
+<td>&#x4E8B;&#x4EF6;&#x7C7B;&#x522B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#xFF1A;video</td>
+</tr>
+<tr>
+<td>9.</td>
+<td>timestamp</td>
+<td>&#x64CD;&#x4F5C;&#x65F6;&#x95F4;</td>
+<td></td>
+<td></td>
+<td>ISO8601&#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>10.</td>
+<td>event</td>
+<td>&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#x4E3A;video.interrupted</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-&#x7528;&#x6237;&#x7B54;&#x9898;"><strong>2.</strong> <strong>&#x7528;&#x6237;&#x7B54;&#x9898;</strong></h4>
+<h5 id="21-&#x6253;&#x5F00;&#x4E60;&#x9898;&#x884C;&#x4E3A;"><strong>2.1</strong> <strong>&#x6253;&#x5F00;&#x4E60;&#x9898;&#x884C;&#x4E3A;</strong></h5>
+<h5 id="211-&#x63CF;&#x8FF0;"><strong>2.1.1.</strong> <strong>&#x63CF;&#x8FF0;</strong></h5>
+<h5 id="212-&#x6570;&#x636E;&#x6837;&#x4F8B;"><strong>2.1.2.</strong> <strong>&#x6570;&#x636E;&#x6837;&#x4F8B;</strong></h5>
+<pre><code>{
+    &quot;user_id&quot;: &quot;30&quot;, 
+    &quot;anonymous_id&quot;: &quot;&#x533F;&#x540D;&#x7528;&#x6237;&#x7F16;&#x53F7;&quot;, 
+    &quot;timestamp&quot;: &quot;2017-11-27T13:28:28.398446+00:00&quot;, 
+    &quot;properties&quot;: {
+    &quot;problem_id&quot;: &quot;&#x8BD5;&#x9898;1&quot;, 
+    &quot;course_id&quot;: &quot;001&quot;,
+    &quot;platform&quot;: &quot;&#x7EC8;&#x7AEF;&quot;, 
+    &quot;event_type&quot;:&quot;problem&quot;
+     }, 
+  &quot;type&quot;: &quot;track&quot;, 
+  &quot;event&quot;: &quot;problem.shown&quot;
+}
+</code></pre><h5 id="213-&#x683C;&#x5F0F;&#x8BF4;&#x660E;"><strong>2.1.3.</strong> <strong>&#x683C;&#x5F0F;&#x8BF4;&#x660E;</strong></h5>
+<table>
+<thead>
+<tr>
+<th><strong>&#x5E8F;&#x53F7;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x540D;&#x79F0;</strong></th>
+<th><strong>&#x8BF4;&#x660E;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x7C7B;&#x578B;</strong></th>
+<th><strong>&#x662F;&#x5426;&#x5FC5;&#x586B;</strong></th>
+<th><strong>&#x5907;&#x6CE8;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>user_id</td>
+<td>&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>2.</td>
+<td>anonymous_id</td>
+<td>&#x533F;&#x540D;&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>N</td>
+<td>&#x533F;&#x540D;&#x7528;&#x6237;&#x5FC5;&#x586B;</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>problem_id</td>
+<td>&#x9898;&#x76EE;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>4.</td>
+<td>course_id</td>
+<td>&#x8BFE;&#x7A0B;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>5.</td>
+<td>platform</td>
+<td>&#x7EC8;&#x7AEF;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>6.</td>
+<td>type</td>
+<td>&#x91C7;&#x96C6;&#x7C7B;&#x578B;</td>
+<td></td>
+<td></td>
+<td>&#x586B;&#x5199;&#xFF1A;track</td>
+</tr>
+<tr>
+<td>7.</td>
+<td>event_type</td>
+<td>&#x4E8B;&#x4EF6;&#x7C7B;&#x522B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#xFF1A;problem</td>
+</tr>
+<tr>
+<td>8.</td>
+<td>timestamp</td>
+<td>&#x64CD;&#x4F5C;&#x65F6;&#x95F4;</td>
+<td></td>
+<td></td>
+<td>ISO8601&#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>9.</td>
+<td>event</td>
+<td>&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#x4E3A;problem.shown</td>
+</tr>
+</tbody>
+</table>
+<h5 id="22-&#x7B54;&#x9898;&#x884C;&#x4E3A;"><strong>2.2</strong> <strong>&#x7B54;&#x9898;&#x884C;&#x4E3A;</strong></h5>
+<h5 id="221-&#x63CF;&#x8FF0;"><strong>2.2.1.</strong> <strong>&#x63CF;&#x8FF0;</strong></h5>
+<h5 id="222-&#x6570;&#x636E;&#x6837;&#x4F8B;"><strong>2.2.2.</strong> <strong>&#x6570;&#x636E;&#x6837;&#x4F8B;</strong></h5>
+<pre><code>{
+    &quot;user_id&quot;: &quot;30&quot;, 
+    &quot;anonymous_id&quot;: &quot;&#x533F;&#x540D;&#x7528;&#x6237;&#x7F16;&#x53F7;&quot;, 
+    &quot;timestamp&quot;: &quot;2017-11-27T13:28:28.398446+00:00&quot;, 
+    &quot;properties&quot;: {
+    &quot;problem_id&quot;: &quot;&#x8BD5;&#x9898;1&quot;, 
+    &quot;course_id&quot;: &quot;001&quot;,
+    &quot;platform&quot;: &quot;&#x7EC8;&#x7AEF;&quot;,
+    &quot;attempts&quot;: 1, 
+    &quot;max_grade&quot;: 100, 
+    &quot;grade&quot;: 0, 
+    &quot;success&quot;: &quot;incorrect&quot;,
+    &quot;event_type&quot;:&quot;problem&quot;
+  }, 
+  &quot;type&quot;: &quot;track&quot;, 
+  &quot;event&quot;: &quot;problem.submitted&quot;
+}
+</code></pre><h5 id="223-&#x683C;&#x5F0F;&#x8BF4;&#x660E;"><strong>2.2.3.</strong> <strong>&#x683C;&#x5F0F;&#x8BF4;&#x660E;</strong></h5>
+<table>
+<thead>
+<tr>
+<th><strong>&#x5E8F;&#x53F7;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x540D;&#x79F0;</strong></th>
+<th><strong>&#x8BF4;&#x660E;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x7C7B;&#x578B;</strong></th>
+<th><strong>&#x662F;&#x5426;&#x5FC5;&#x586B;</strong></th>
+<th><strong>&#x5907;&#x6CE8;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>user_id</td>
+<td>&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>2.</td>
+<td>anonymous_id</td>
+<td>&#x533F;&#x540D;&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>N</td>
+<td>&#x533F;&#x540D;&#x7528;&#x6237;&#x5FC5;&#x586B;</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>problem_id</td>
+<td>&#x9898;&#x76EE;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>4.</td>
+<td>platform</td>
+<td>&#x7EC8;&#x7AEF;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>5.</td>
+<td>attempts</td>
+<td>&#x5C1D;&#x8BD5;&#x6B21;&#x6570;</td>
+<td>&#x6574;&#x578B;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6.</td>
+<td>success</td>
+<td>&#x7B54;&#x9898;&#x662F;&#x5426;&#x6B63;&#x786E;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td></td>
+<td>&#x679A;&#x4E3E;&#xFF1A;incorrectcorrect</td>
+</tr>
+<tr>
+<td>7.</td>
+<td>max_grade</td>
+<td>&#x6EE1;&#x5206;</td>
+<td>&#x6D6E;&#x70B9;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8.</td>
+<td>grade</td>
+<td>&#x5F97;&#x5206;</td>
+<td>&#x6D6E;&#x70B9;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9.</td>
+<td>type</td>
+<td>&#x91C7;&#x96C6;&#x7C7B;&#x578B;</td>
+<td></td>
+<td></td>
+<td>&#x586B;&#x5199;&#xFF1A;track</td>
+</tr>
+<tr>
+<td>10.</td>
+<td>event_type</td>
+<td>&#x4E8B;&#x4EF6;&#x7C7B;&#x522B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#xFF1A;problem</td>
+</tr>
+<tr>
+<td>11.</td>
+<td>timestamp</td>
+<td>&#x64CD;&#x4F5C;&#x65F6;&#x95F4;</td>
+<td></td>
+<td></td>
+<td>ISO8601&#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>12.</td>
+<td>event</td>
+<td>&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#x4E3A;problem.submitted</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-&#x7528;&#x6237;&#x6CE8;&#x518C;"><strong>3.</strong> <strong>&#x7528;&#x6237;&#x6CE8;&#x518C;</strong></h4>
+<h5 id="31-&#x63CF;&#x8FF0;"><strong>3.1</strong> <strong>&#x63CF;&#x8FF0;</strong></h5>
+<h5 id="32-&#x6570;&#x636E;&#x6837;&#x4F8B;"><strong>3.2</strong> <strong>&#x6570;&#x636E;&#x6837;&#x4F8B;</strong></h5>
+<pre><code>{
+    &quot;user_id&quot;: &quot;30&quot;,
+    &quot;anonymous_id&quot;: &quot;&#x533F;&#x540D;&#x7528;&#x6237;&#x7F16;&#x53F7;&quot;,
+    &quot;event&quot;: &quot;user.register&quot;,
+    &quot;properties&quot;: {
+    &quot;user_name&quot;: &quot;&#x59D3;&#x540D;&quot;,
+    &quot;birthday&quot;: &quot;&#x51FA;&#x751F;&#x65E5;&#x671F;&quot;,
+    &quot;education&quot;: &quot;&#x7528;&#x6237;&#x5B66;&#x5386;&quot;,
+    &quot;gender&quot;: &quot;&#x6027;&#x522B;&quot;,
+    &quot;job_title&quot;: &quot;&#x804C;&#x79F0;&quot;,
+    &quot;role&quot;: &quot;&#x7528;&#x6237;&#x89D2;&#x8272;&quot;,
+    &quot;user_type&quot;: &quot;&#x7528;&#x6237;&#x7C7B;&#x578B;&quot;,
+    &quot;country&quot;: &quot;&#x56FD;&#x5BB6;&#x540D;&#x79F0;&quot;,
+    &quot;province&quot;: &quot;&#x7701;&#x540D;&#x79F0;&quot;,
+    &quot;city&quot;: &quot;&#x5E02;&#x540D;&#x79F0;&quot;,    
+    &quot;district&quot;: &quot;&#x533A;/&#x53BF;&#x540D;&#x79F0;&quot;,
+    &quot;register_date&quot;: &quot;&#x6CE8;&#x518C;&#x65E5;&#x671F;&quot;,
+    &quot;platform&quot;: &quot;&#x7EC8;&#x7AEF;&quot;
+    },
+    &quot;timestamp&quot;: &quot;2017-11-27T13:28:28.398446+00:00&quot;,
+    &quot;type&quot;: &quot;track&quot;
+}
+</code></pre><h5 id="33-&#x683C;&#x5F0F;&#x8BF4;&#x660E;"><strong>3.3</strong> <strong>&#x683C;&#x5F0F;&#x8BF4;&#x660E;</strong></h5>
+<table>
+<thead>
+<tr>
+<th><strong>&#x5E8F;&#x53F7;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x540D;&#x79F0;</strong></th>
+<th><strong>&#x8BF4;&#x660E;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x7C7B;&#x578B;</strong></th>
+<th><strong>&#x662F;&#x5426;&#x5FC5;&#x586B;</strong></th>
+<th><strong>&#x5907;&#x6CE8;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>user_id</td>
+<td>&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x5168;&#x5C40;&#x552F;&#x4E00;</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>user_name</td>
+<td>&#x7528;&#x6237;&#x59D3;&#x540D;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>3.</td>
+<td>gender</td>
+<td>&#x6027;&#x522B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x7537;&#x5973;&#x672A;&#x77E5;</td>
+</tr>
+<tr>
+<td>4.</td>
+<td>birthday</td>
+<td>&#x51FA;&#x751F;&#x65E5;&#x671F;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>N</td>
+<td>yyyy-mm-dd</td>
+</tr>
+<tr>
+<td>5.</td>
+<td>job_title</td>
+<td>&#x804C;&#x79F0;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x521D;&#x7EA7;&#x4E2D;&#x7EA7;&#x9AD8;&#x7EA7;</td>
+</tr>
+<tr>
+<td>6.</td>
+<td>user_type</td>
+<td>&#x7528;&#x6237;&#x7C7B;&#x578B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x6CE8;&#x518C;&#x4ED8;&#x8D39;</td>
+</tr>
+<tr>
+<td>7.</td>
+<td>role</td>
+<td>&#x7528;&#x6237;&#x89D2;&#x8272;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x8001;&#x5E08;&#x5B66;&#x751F;</td>
+</tr>
+<tr>
+<td>8.</td>
+<td>register_date</td>
+<td>&#x6CE8;&#x518C;&#x65E5;&#x671F;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>9.</td>
+<td>platform</td>
+<td>&#x7EC8;&#x7AEF;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>10.</td>
+<td>education</td>
+<td>&#x7528;&#x6237;&#x5B66;&#x5386;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x521D;&#x4E2D;&#x4EE5;&#x4E0B;&#x9AD8;&#x4E2D;&#x5927;&#x5B66;&#x7855;&#x58EB;&#x535A;&#x58EB;</td>
+</tr>
+<tr>
+<td>11.</td>
+<td>country</td>
+<td>&#x56FD;&#x5BB6;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>ISO3166-1&#x7F16;&#x7801;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>12.</td>
+<td>province</td>
+<td>&#x7701;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>2017&#x6700;&#x65B0;&#x7701;&#x5E02;&#x533A;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>13.</td>
+<td>city</td>
+<td>&#x5E02;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>2017&#x6700;&#x65B0;&#x7701;&#x5E02;&#x533A;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>14.</td>
+<td>district</td>
+<td>&#x533A;/&#x53BF;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>N</td>
+<td>2017&#x6700;&#x65B0;&#x7701;&#x5E02;&#x533A;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>15.</td>
+<td>type</td>
+<td>&#x91C7;&#x96C6;&#x7C7B;&#x578B;</td>
+<td></td>
+<td></td>
+<td>&#x586B;&#x5199;&#xFF1A;track</td>
+</tr>
+<tr>
+<td>16.</td>
+<td>timestamp</td>
+<td>&#x64CD;&#x4F5C;&#x65F6;&#x95F4;</td>
+<td></td>
+<td></td>
+<td>ISO8601&#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>17.</td>
+<td>event</td>
+<td>&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#x4E3A;user.register</td>
+</tr>
+</tbody>
+</table>
+<h4 id="4-&#x7528;&#x6237;&#x4ED8;&#x8D39;"><strong>4.</strong> <strong>&#x7528;&#x6237;&#x4ED8;&#x8D39;</strong></h4>
+<h5 id="41-&#x63CF;&#x8FF0;"><strong>4.1</strong> <strong>&#x63CF;&#x8FF0;</strong></h5>
+<h5 id="42-&#x6570;&#x636E;&#x6837;&#x4F8B;"><strong>4.2</strong> <strong>&#x6570;&#x636E;&#x6837;&#x4F8B;</strong></h5>
+<pre><code>{
+    &quot;user_id&quot;: &quot;30&quot;, 
+    &quot;anonymous_id&quot;: &quot;&#x533F;&#x540D;&#x7528;&#x6237;&#x7F16;&#x53F7;&quot;, 
+    &quot;timestamp&quot;: &quot;2017-11-27T13:28:28.398446+00:00&quot;, 
+    &quot;properties&quot;: {
+    &quot;course_id&quot;: &quot;001&quot;,
+    &quot;course_name&quot;: &quot;&#x540D;&#x79F0;&quot;,
+    &quot;course_type_level1&quot;: &quot;&#x65B0;&#x6982;&#x5FF5;&quot;,
+    &quot;course_type_level2&quot;: &quot;&#x5916;&#x6559;&quot;,
+    &quot;classdate&quot;: &quot;&#x5F00;&#x8BFE;&#x65E5;&#x671F;&quot;,
+    &quot;pay_amt&quot;:&#x4ED8;&#x8D39;&#x91D1;&#x989D;,
+    &quot;platform&quot;: &quot;&#x7EC8;&#x7AEF;&quot;
+     }, 
+  &quot;type&quot;: &quot;track&quot;, 
+  &quot;event&quot;: &quot;order.completed&quot;
+}
+</code></pre><h5 id="43-&#x683C;&#x5F0F;&#x8BF4;&#x660E;"><strong>4.3</strong> <strong>&#x683C;&#x5F0F;&#x8BF4;&#x660E;</strong></h5>
+<table>
+<thead>
+<tr>
+<th><strong>&#x5E8F;&#x53F7;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x540D;&#x79F0;</strong></th>
+<th><strong>&#x8BF4;&#x660E;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x7C7B;&#x578B;</strong></th>
+<th><strong>&#x662F;&#x5426;&#x5FC5;&#x586B;</strong></th>
+<th><strong>&#x5907;&#x6CE8;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>user_id</td>
+<td>&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>2.</td>
+<td>anonymous_id</td>
+<td>&#x533F;&#x540D;&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>3.</td>
+<td>course_id</td>
+<td>&#x8BFE;&#x7A0B;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>4.</td>
+<td>platform</td>
+<td>&#x7EC8;&#x7AEF;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>5.</td>
+<td>course_name</td>
+<td>&#x8BFE;&#x7A0B;&#x540D;&#x79F0;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>6.</td>
+<td>course_type_level1</td>
+<td>&#x4E00;&#x7EA7;&#x5206;&#x7C7B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>7.</td>
+<td>course_type_level2</td>
+<td>&#x4E8C;&#x7EA7;&#x5206;&#x7C7B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>8.</td>
+<td>classdate</td>
+<td>&#x5F00;&#x8BFE;&#x65E5;&#x671F;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>yyyy-mm-dd</td>
+</tr>
+<tr>
+<td>9.</td>
+<td>type</td>
+<td>&#x91C7;&#x96C6;&#x7C7B;&#x578B;</td>
+<td></td>
+<td></td>
+<td>&#x586B;&#x5199;&#xFF1A;track</td>
+</tr>
+<tr>
+<td>10.</td>
+<td>pay_amt</td>
+<td>&#x4ED8;&#x8D39;&#x91D1;&#x989D;</td>
+<td>&#x6D6E;&#x70B9;</td>
+<td>N</td>
+<td>&#x4FDD;&#x7559;&#x4E24;&#x4F4D;&#x5C0F;&#x6570;&#x70B9;</td>
+</tr>
+<tr>
+<td>11.</td>
+<td>timestamp</td>
+<td>&#x64CD;&#x4F5C;&#x65F6;&#x95F4;</td>
+<td></td>
+<td></td>
+<td>ISO8601&#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>12.</td>
+<td>event</td>
+<td>&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#x4E3A;order.completed</td>
+</tr>
+</tbody>
+</table>
+<h4 id="5-&#x7528;&#x6237;&#x9009;&#x8BFE;"><strong>5.</strong> <strong>&#x7528;&#x6237;&#x9009;&#x8BFE;</strong></h4>
+<h5 id="51-&#x63CF;&#x8FF0;"><strong>5.1</strong> <strong>&#x63CF;&#x8FF0;</strong></h5>
+<h5 id="52-&#x6570;&#x636E;&#x6837;&#x4F8B;"><strong>5.2</strong> <strong>&#x6570;&#x636E;&#x6837;&#x4F8B;</strong></h5>
+<pre><code>{
+    &quot;user_id&quot;: &quot;30&quot;, 
+    &quot;anonymous_id&quot;: &quot;&#x533F;&#x540D;&#x7528;&#x6237;&#x7F16;&#x53F7;&quot;, 
+    &quot;timestamp&quot;: &quot;2017-11-27T13:28:28.398446+00:00&quot;, 
+    &quot;properties&quot;: {
+    &quot;course_id&quot;: &quot;001&quot;, 
+    &quot;course_name&quot;: &quot;&#x540D;&#x79F0;&quot;,
+    &quot;course_type_level1&quot;: &quot;&#x65B0;&#x6982;&#x5FF5;&quot;,
+    &quot;course_type_level2&quot;: &quot;&#x5916;&#x6559;&quot;,
+    &quot;classdate&quot;:&quot;&#x5F00;&#x8BFE;&#x65E5;&#x671F;&quot;,
+    &quot;cost_type&quot;:&quot;&#x514D;&#x8D39;/&#x4ED8;&#x8D39;&quot;,
+    &quot;platform&quot;: &quot;&#x7EC8;&#x7AEF;&quot;
+     }, 
+  &quot;type&quot;: &quot;track&quot;, 
+  &quot;event&quot;: &quot;course.enrollment.activated&quot;
+}
+</code></pre><h5 id="53-&#x683C;&#x5F0F;&#x8BF4;&#x660E;"><strong>5.3</strong> <strong>&#x683C;&#x5F0F;&#x8BF4;&#x660E;</strong></h5>
+<table>
+<thead>
+<tr>
+<th><strong>&#x5E8F;&#x53F7;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x540D;&#x79F0;</strong></th>
+<th><strong>&#x8BF4;&#x660E;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x7C7B;&#x578B;</strong></th>
+<th><strong>&#x662F;&#x5426;&#x5FC5;&#x586B;</strong></th>
+<th><strong>&#x5907;&#x6CE8;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>user_id</td>
+<td>&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>2.</td>
+<td>anonymous_id</td>
+<td>&#x533F;&#x540D;&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>N</td>
+<td>&#x533F;&#x540D;&#x7528;&#x6237;&#x5FC5;&#x586B;</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>course_id</td>
+<td>&#x8BFE;&#x7A0B;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>4.</td>
+<td>platform</td>
+<td>&#x7EC8;&#x7AEF;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>5.</td>
+<td>course_name</td>
+<td>&#x8BFE;&#x7A0B;&#x540D;&#x79F0;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>6.</td>
+<td>course_type_level1</td>
+<td>&#x4E00;&#x7EA7;&#x5206;&#x7C7B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>7.</td>
+<td>course_type_level2</td>
+<td>&#x4E8C;&#x7EA7;&#x5206;&#x7C7B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>8.</td>
+<td>classdate</td>
+<td>&#x5F00;&#x8BFE;&#x65E5;&#x671F;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>yyyy-mm-dd</td>
+</tr>
+<tr>
+<td>9.</td>
+<td>cost_type</td>
+<td>&#x662F;&#x5426;&#x4ED8;&#x8D39;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x514D;&#x8D39;&#x4ED8;&#x8D39;</td>
+</tr>
+<tr>
+<td>10.</td>
+<td>type</td>
+<td>&#x91C7;&#x96C6;&#x7C7B;&#x578B;</td>
+<td></td>
+<td></td>
+<td>&#x586B;&#x5199;&#xFF1A;track</td>
+</tr>
+<tr>
+<td>11.</td>
+<td>timestamp</td>
+<td>&#x64CD;&#x4F5C;&#x65F6;&#x95F4;</td>
+<td></td>
+<td></td>
+<td>ISO8601&#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>12.</td>
+<td>event</td>
+<td>&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#x4E3A;course.enrollment.activated</td>
+</tr>
+</tbody>
+</table>
+<h4 id="6-&#x7528;&#x6237;&#x6D4F;&#x89C8;&#x9875;&#x9762;"><strong>6.</strong> <strong>&#x7528;&#x6237;&#x6D4F;&#x89C8;&#x9875;&#x9762;</strong></h4>
+<h5 id="61-&#x63CF;&#x8FF0;"><strong>6.1</strong> <strong>&#x63CF;&#x8FF0;</strong></h5>
+<p><strong>6.2</strong> <strong>&#x6570;&#x636E;&#x6837;&#x4F8B;</strong></p>
+<pre><code>{
+    &quot;user_id&quot;: &quot;30&quot;, 
+    &quot;anonymous_id&quot;: &quot;&#x533F;&#x540D;&#x7528;&#x6237;&#x7F16;&#x53F7;&quot;, 
+    &quot;timestamp&quot;: &quot;2017-11-27T13:28:28.398446+00:00&quot;, 
+    &quot;properties&quot;: {
+    &quot;url&quot;: &quot;www.baidu.com&quot;,
+    &quot;platform&quot;: &quot;&#x7EC8;&#x7AEF;&quot;
+     }, 
+    &quot;type&quot;: &quot;track&quot;, 
+  &quot;event&quot;: &quot;page.view&quot;
+}
+</code></pre><h5 id="63-&#x683C;&#x5F0F;&#x8BF4;&#x660E;"><strong>6.3</strong> <strong>&#x683C;&#x5F0F;&#x8BF4;&#x660E;</strong></h5>
+<table>
+<thead>
+<tr>
+<th><strong>&#x5E8F;&#x53F7;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x540D;&#x79F0;</strong></th>
+<th><strong>&#x8BF4;&#x660E;</strong></th>
+<th><strong>&#x6570;&#x636E;&#x7C7B;&#x578B;</strong></th>
+<th><strong>&#x662F;&#x5426;&#x5FC5;&#x586B;</strong></th>
+<th><strong>&#x5907;&#x6CE8;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>user_id</td>
+<td>&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>N</td>
+<td></td>
+</tr>
+<tr>
+<td>2.</td>
+<td>anonymous_id</td>
+<td>&#x533F;&#x540D;&#x7528;&#x6237;&#x7F16;&#x53F7;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x533F;&#x540D;&#x7528;&#x6237;&#x5FC5;&#x586B;</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>url</td>
+<td>&#x8BBF;&#x95EE;&#x9875;&#x9762;&#x5730;&#x5740;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>4.</td>
+<td>platform</td>
+<td>&#x7EC8;&#x7AEF;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>5.</td>
+<td>type</td>
+<td>&#x91C7;&#x96C6;&#x7C7B;&#x578B;</td>
+<td></td>
+<td></td>
+<td>&#x586B;&#x5199;&#xFF1A;track</td>
+</tr>
+<tr>
+<td>6.</td>
+<td>timestamp</td>
+<td>&#x64CD;&#x4F5C;&#x65F6;&#x95F4;</td>
+<td></td>
+<td></td>
+<td>ISO8601&#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>7.</td>
+<td>event</td>
+<td>&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;</td>
+<td>&#x5B57;&#x7B26;</td>
+<td>Y</td>
+<td>&#x586B;&#x5199;&#x4E3A;page.view</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../chapter1/node1/README.md" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 测试">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数字跳动数据采集方案","level":"1.3","depth":1,"previous":{"title":"测试","level":"1.2.1","depth":2,"path":"chapter1/node1/README.md","ref":"chapter1/node1/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toc2","expandable-chapters","livereload"],"pluginsConfig":{"livereload":{},"toc":{"addClass":true,"className":"toc"},"search":{},"toc2":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Data/数字跳动数据采集方案.md","mtime":"2019-08-15T06:54:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-15T07:12:35.210Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toc2/toc2.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
