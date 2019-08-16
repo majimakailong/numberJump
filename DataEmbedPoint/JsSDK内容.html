@@ -1,0 +1,900 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>javacript 数据埋点文档 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toc2/toc2.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="JsSDK使用方法.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="JsSDK内容.html">
+            
+                <a href="JsSDK内容.html">
+            
+                    
+                    javacript 数据埋点文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="JsSDK使用方法.html">
+            
+                <a href="JsSDK使用方法.html">
+            
+                    
+                    javacript 数据埋点使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../CollectData/数字跳动数据采集方案.html">
+            
+                <a href="../CollectData/数字跳动数据采集方案.html">
+            
+                    
+                    数字跳动数据采集方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >javacript 数据埋点文档</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <pre><code class="lang-javascript">!<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">t</span>(<span class="hljs-params">r</span>) </span>{
+        <span class="hljs-keyword">if</span> (n[r]) <span class="hljs-keyword">return</span> n[r].exports;
+        <span class="hljs-keyword">var</span> i = n[r] = {i: r, l: !<span class="hljs-number">1</span>, exports: {}};
+        <span class="hljs-keyword">return</span> e[r].call(i.exports, i, i.exports, t), i.l = !<span class="hljs-number">0</span>, i.exports
+    }
+
+    <span class="hljs-keyword">var</span> n = {};
+    t.m = e, t.c = n, t.i = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+        <span class="hljs-keyword">return</span> e
+    }, t.d = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, n, r</span>) </span>{
+        t.o(e, n) || <span class="hljs-built_in">Object</span>.defineProperty(e, n, {configurable: !<span class="hljs-number">1</span>, enumerable: !<span class="hljs-number">0</span>, get: r})
+    }, t.n = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+        <span class="hljs-keyword">var</span> n = e &amp;&amp; e.__esModule ? <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">return</span> e.default
+        } : <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">return</span> e
+        };
+        <span class="hljs-keyword">return</span> t.d(n, <span class="hljs-string">&quot;a&quot;</span>, n), n
+    }, t.o = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.prototype.hasOwnProperty.call(e, t)
+    }, t.p = <span class="hljs-string">&quot;&quot;</span>, t(t.s = <span class="hljs-number">26</span>)
+}([<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+<span class="hljs-meta">    &quot;use strict&quot;</span>;
+    e.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">var</span> e = <span class="hljs-built_in">arguments</span>[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">arguments</span>.length &gt; <span class="hljs-number">1</span>) <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> t = <span class="hljs-number">1</span>; t &lt; <span class="hljs-built_in">arguments</span>.length; t++) <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> n <span class="hljs-keyword">in</span> <span class="hljs-built_in">arguments</span>[t]) e[n] = <span class="hljs-built_in">arguments</span>[t][n];
+        <span class="hljs-keyword">return</span> e
+    }
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+<span class="hljs-meta">    &quot;use strict&quot;</span>;
+    <span class="hljs-string">&quot;user strict&quot;</span>;
+    <span class="hljs-keyword">var</span> r = n(<span class="hljs-number">9</span>), i = n(<span class="hljs-number">5</span>), o = <span class="hljs-keyword">void</span> <span class="hljs-number">0</span>, a = <span class="hljs-built_in">window</span>.LS, s = <span class="hljs-string">&quot;analytics_user_id_&quot;</span> + i.version,
+        u = <span class="hljs-string">&quot;analytics_anonymous_id_&quot;</span> + i.version;
+    e.exports = {
+        getId: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">if</span> (o) <span class="hljs-keyword">return</span> o.message_id = r(), o;
+            <span class="hljs-keyword">var</span> e = a.get(s), t = a.get(u);
+            <span class="hljs-keyword">return</span> t || (t = r(), a.set(u, t)), o = {}, o.anonymous_id = t, o.user_id = e || <span class="hljs-string">&quot;&quot;</span>, o.message_id = r(), o
+        }, setUserId: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+            a.set(s, e), o &amp;&amp; (o.user_id = e)
+        }, delUserId: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            a.remove(s), o &amp;&amp; <span class="hljs-keyword">delete</span> o.user_id
+        }
+    }
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+<span class="hljs-meta">    &quot;use strict&quot;</span>;
+    n(<span class="hljs-number">17</span>);
+    <span class="hljs-keyword">var</span> r = n(<span class="hljs-number">0</span>), i = n(<span class="hljs-number">12</span>);
+    <span class="hljs-built_in">window</span>.analytics = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+        <span class="hljs-keyword">return</span> e = r({postUrl: <span class="hljs-string">&quot;https://api.yzztech.com/api/v1&quot;</span>, apiKey: <span class="hljs-string">&quot;&quot;</span>, context: {}, autoPV: !<span class="hljs-number">0</span>}, e), i(e)
+    }, e.exports = <span class="hljs-built_in">window</span>.analytics
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+<span class="hljs-meta">    &quot;use strict&quot;</span>;
+    <span class="hljs-keyword">var</span> r = n(<span class="hljs-number">5</span>), i = n(<span class="hljs-number">6</span>), o = <span class="hljs-built_in">window</span>.document, a = <span class="hljs-built_in">window</span>.location, s = <span class="hljs-built_in">window</span>.screen;
+    e.exports = {
+        page: {path: a.pathname, referrer: o.referrer, host: a.hostname, title: o.title},
+        user_agent: <span class="hljs-built_in">window</span>.navigator.userAgent,
+        library: {name: r.name, version: r.version},
+        screen: {width: s.width, height: s.height, density: <span class="hljs-built_in">window</span>.devicePixelRatio || <span class="hljs-number">1</span>},
+        campaign: i.getValue()
+    }
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+<span class="hljs-meta">    &quot;use strict&quot;</span>;
+    <span class="hljs-keyword">var</span> r = n(<span class="hljs-number">23</span>);
+    e.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+        <span class="hljs-keyword">var</span> t = {
+            url: <span class="hljs-string">&quot;&quot;</span>, success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            }, error: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            }, type: <span class="hljs-string">&quot;GET&quot;</span>, data: <span class="hljs-literal">null</span>, <span class="hljs-keyword">async</span>: !<span class="hljs-number">0</span>, apiKey: <span class="hljs-string">&quot;&quot;</span>
+        };
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> n <span class="hljs-keyword">in</span> e) t[n] = e[n];
+        <span class="hljs-keyword">var</span> i = <span class="hljs-string">&quot;get&quot;</span> === t.type.toLowerCase();
+        <span class="hljs-keyword">if</span> (i &amp;&amp; t.data &amp;&amp; (t.url += <span class="hljs-string">&quot;?&quot;</span> + r.stringify(t.data), <span class="hljs-keyword">delete</span> t.data), <span class="hljs-string">&quot;XDomainRequest&quot;</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">window</span> &amp;&amp; <span class="hljs-built_in">window</span>.XDomainRequest) {
+            <span class="hljs-keyword">var</span> o = <span class="hljs-keyword">new</span> XDomainRequest;
+            <span class="hljs-keyword">return</span> o.open(t.type, t.url), o.onload = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                t.success(o.responseText, o)
+            }, o.onerror = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                t.error &amp;&amp; t.error(o)
+            }, <span class="hljs-keyword">void</span> (i ? o.send() : o.send(t.data ? <span class="hljs-built_in">JSON</span>.stringify(t.data) : <span class="hljs-string">&quot;&quot;</span>))
+        }
+        <span class="hljs-keyword">var</span> a = <span class="hljs-keyword">new</span> XMLHttpRequest;
+        a.open(t.type.toUpperCase(), t.url, t.async), i || <span class="hljs-literal">null</span> === t.data || a.setRequestHeader(<span class="hljs-string">&quot;Content-Type&quot;</span>, <span class="hljs-string">&quot;application/json;charset=UTF-8&quot;</span>), a.setRequestHeader(<span class="hljs-string">&quot;X-API-KEY&quot;</span>, t.apiKey), i ? a.send() : a.send(t.data ? <span class="hljs-built_in">JSON</span>.stringify(t.data) : <span class="hljs-string">&quot;&quot;</span>), a.onreadystatechange = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-number">4</span> == <span class="hljs-built_in">parseInt</span>(a.readyState, <span class="hljs-number">10</span>) &amp;&amp; (<span class="hljs-number">200</span> == <span class="hljs-built_in">parseInt</span>(a.status, <span class="hljs-number">10</span>) ? t.success(a.responseText, a) : t.error &amp;&amp; t.error(a))
+        }
+    }
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+<span class="hljs-meta">    &quot;use strict&quot;</span>;
+    e.exports = {name: <span class="hljs-string">&quot;analytics-js&quot;</span>, version: <span class="hljs-string">&quot;1.0.0&quot;</span>}
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+<span class="hljs-meta">    &quot;use strict&quot;</span>;
+    <span class="hljs-string">&quot;user strict&quot;</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">r</span>(<span class="hljs-params">e, t</span>) </span>{
+        <span class="hljs-keyword">if</span> (!(e <span class="hljs-keyword">instanceof</span> t)) <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">&quot;Cannot call a class as a function&quot;</span>)
+    }
+
+    <span class="hljs-keyword">var</span> i = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">e</span>(<span class="hljs-params">e, t</span>) </span>{
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> n = <span class="hljs-number">0</span>; n &lt; t.length; n++) {
+                <span class="hljs-keyword">var</span> r = t[n];
+                r.enumerable = r.enumerable || !<span class="hljs-number">1</span>, r.configurable = !<span class="hljs-number">0</span>, <span class="hljs-string">&quot;value&quot;</span> <span class="hljs-keyword">in</span> r &amp;&amp; (r.writable = !<span class="hljs-number">0</span>), <span class="hljs-built_in">Object</span>.defineProperty(e, r.key, r)
+            }
+        }
+
+        <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">t, n, r</span>) </span>{
+            <span class="hljs-keyword">return</span> n &amp;&amp; e(t.prototype, n), r &amp;&amp; e(t, r), t
+        }
+    }(), o = n(<span class="hljs-number">16</span>), a = n(<span class="hljs-number">18</span>), s = <span class="hljs-built_in">window</span>.LS, u = <span class="hljs-string">&quot;campaign&quot;</span>, c = {
+        utm_source: <span class="hljs-string">&quot;source&quot;</span>,
+        utm_medium: <span class="hljs-string">&quot;medium&quot;</span>,
+        utm_campaign: <span class="hljs-string">&quot;campaign&quot;</span>,
+        utm_term: <span class="hljs-string">&quot;term&quot;</span>,
+        utm_content: <span class="hljs-string">&quot;content&quot;</span>
+    }, l = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">var</span> e = {};
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> t <span class="hljs-keyword">in</span> c) {
+            <span class="hljs-keyword">var</span> n = a.get(t);
+            n &amp;&amp; (e[c[t]] = n)
+        }
+        <span class="hljs-keyword">return</span> e
+    }, d = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">e</span>(<span class="hljs-params"></span>) </span>{
+            r(<span class="hljs-keyword">this</span>, e), <span class="hljs-keyword">this</span>.init()
+        }
+
+        <span class="hljs-keyword">return</span> i(e, [{
+            key: <span class="hljs-string">&quot;init&quot;</span>, value: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                <span class="hljs-keyword">var</span> e = l();
+                e.source &amp;&amp; <span class="hljs-keyword">this</span>.setValue(e)
+            }
+        }, {
+            key: <span class="hljs-string">&quot;getValue&quot;</span>, value: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                <span class="hljs-keyword">var</span> e = s.get(u);
+                <span class="hljs-keyword">try</span> {
+                    e = <span class="hljs-built_in">JSON</span>.parse(e)
+                } <span class="hljs-keyword">catch</span> (t) {
+                    e = {}
+                }
+                <span class="hljs-keyword">return</span> e
+            }
+        }, {
+            key: <span class="hljs-string">&quot;setValue&quot;</span>, value: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+                <span class="hljs-keyword">return</span> o.isPlainObject(e) &amp;&amp; s.set(u, <span class="hljs-built_in">JSON</span>.stringify(e)), <span class="hljs-keyword">this</span>
+            }
+        }, {
+            key: <span class="hljs-string">&quot;clear&quot;</span>, value: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                <span class="hljs-keyword">return</span> s.remove(u), <span class="hljs-keyword">this</span>
+            }
+        }]), e
+    }();
+    e.exports = <span class="hljs-keyword">new</span> d
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t</span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">n</span>(<span class="hljs-params">e, t</span>) </span>{
+        <span class="hljs-keyword">var</span> n = t || <span class="hljs-number">0</span>, i = r;
+        <span class="hljs-keyword">return</span> i[e[n++]] + i[e[n++]] + i[e[n++]] + i[e[n++]] + <span class="hljs-string">&quot;-&quot;</span> + i[e[n++]] + i[e[n++]] + <span class="hljs-string">&quot;-&quot;</span> + i[e[n++]] + i[e[n++]] + <span class="hljs-string">&quot;-&quot;</span> + i[e[n++]] + i[e[n++]] + <span class="hljs-string">&quot;-&quot;</span> + i[e[n++]] + i[e[n++]] + i[e[n++]] + i[e[n++]] + i[e[n++]] + i[e[n++]]
+    }
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> r = [], i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">256</span>; ++i) r[i] = (i + <span class="hljs-number">256</span>).toString(<span class="hljs-number">16</span>).substr(<span class="hljs-number">1</span>);
+    e.exports = n
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t</span>) </span>{
+    <span class="hljs-keyword">var</span> n = <span class="hljs-string">&quot;undefined&quot;</span> != <span class="hljs-keyword">typeof</span> crypto &amp;&amp; crypto.getRandomValues.bind(crypto) || <span class="hljs-string">&quot;undefined&quot;</span> != <span class="hljs-keyword">typeof</span> msCrypto &amp;&amp; msCrypto.getRandomValues.bind(msCrypto);
+    <span class="hljs-keyword">if</span> (n) {
+        <span class="hljs-keyword">var</span> r = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Uint8Array</span>(<span class="hljs-number">16</span>);
+        e.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">return</span> n(r), r
+        }
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">var</span> i = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-number">16</span>);
+        e.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> e, t = <span class="hljs-number">0</span>; t &lt; <span class="hljs-number">16</span>; t++) <span class="hljs-number">0</span> == (<span class="hljs-number">3</span> &amp; t) &amp;&amp; (e = <span class="hljs-number">4294967296</span> * <span class="hljs-built_in">Math</span>.random()), i[t] = e &gt;&gt;&gt; ((<span class="hljs-number">3</span> &amp; t) &lt;&lt; <span class="hljs-number">3</span>) &amp; <span class="hljs-number">255</span>;
+            <span class="hljs-keyword">return</span> i
+        }
+    }
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">r</span>(<span class="hljs-params">e, t, n</span>) </span>{
+        <span class="hljs-keyword">var</span> r = t &amp;&amp; n || <span class="hljs-number">0</span>;
+        <span class="hljs-string">&quot;string&quot;</span> == <span class="hljs-keyword">typeof</span> e &amp;&amp; (t = <span class="hljs-string">&quot;binary&quot;</span> === e ? <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-number">16</span>) : <span class="hljs-literal">null</span>, e = <span class="hljs-literal">null</span>), e = e || {};
+        <span class="hljs-keyword">var</span> a = e.random || (e.rng || i)();
+        <span class="hljs-keyword">if</span> (a[<span class="hljs-number">6</span>] = <span class="hljs-number">15</span> &amp; a[<span class="hljs-number">6</span>] | <span class="hljs-number">64</span>, a[<span class="hljs-number">8</span>] = <span class="hljs-number">63</span> &amp; a[<span class="hljs-number">8</span>] | <span class="hljs-number">128</span>, t) <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> s = <span class="hljs-number">0</span>; s &lt; <span class="hljs-number">16</span>; ++s) t[r + s] = a[s];
+        <span class="hljs-keyword">return</span> t || o(a)
+    }
+
+    <span class="hljs-keyword">var</span> i = n(<span class="hljs-number">8</span>), o = n(<span class="hljs-number">7</span>);
+    e.exports = r
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+<span class="hljs-meta">    &quot;use strict&quot;</span>;
+    <span class="hljs-keyword">var</span> r = n(<span class="hljs-number">1</span>);
+    e.exports = {
+        logout: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">return</span> r.delUserId()
+        }, getAnonymousId: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">return</span> r.getId().anonymous_id
+        }, getUserId: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">return</span> r.getId().user_id
+        }
+    }
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+<span class="hljs-meta">    &quot;use strict&quot;</span>;
+    <span class="hljs-keyword">var</span> r = n(<span class="hljs-number">4</span>), i = n(<span class="hljs-number">1</span>), o = n(<span class="hljs-number">0</span>), a = n(<span class="hljs-number">3</span>);
+    e.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">t, n, s</span>) </span>{
+            <span class="hljs-keyword">if</span> (i.setUserId(t), !n) <span class="hljs-keyword">return</span> !<span class="hljs-number">1</span>;
+            <span class="hljs-keyword">var</span> u = o({properties: n, type: <span class="hljs-string">&quot;identify&quot;</span>, context: o(a, e.context)}, i.getId());
+            r({
+                url: e.postUrl + <span class="hljs-string">&quot;/identify&quot;</span>, data: u, type: <span class="hljs-string">&quot;post&quot;</span>, apiKey: e.apiKey, done: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t</span>) </span>{
+                    s &amp;&amp; s(<span class="hljs-literal">null</span>, e, t)
+                }, error: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+                    s &amp;&amp; s(e)
+                }
+            })
+        }
+    }
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+<span class="hljs-meta">    &quot;use strict&quot;</span>;
+    <span class="hljs-keyword">var</span> r = n(<span class="hljs-number">15</span>), i = n(<span class="hljs-number">11</span>), o = n(<span class="hljs-number">14</span>), a = n(<span class="hljs-number">10</span>), s = n(<span class="hljs-number">20</span>), u = n(<span class="hljs-number">0</span>), c = n(<span class="hljs-number">6</span>), l = n(<span class="hljs-number">24</span>), d = n(<span class="hljs-number">19</span>);
+    e.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+        <span class="hljs-keyword">var</span> t = e.autoPV, n = {
+            track: r(e),
+            identify: i(e),
+            model: o(e),
+            video: s(e),
+            getAnonymousId: a.getAnonymousId,
+            getUserId: a.getUserId,
+            logout: a.logout,
+            campaign: c,
+            utils: {extend: u, uuid: l}
+        };
+        <span class="hljs-keyword">if</span> (t &amp;&amp; !d.isSpider()) {
+            <span class="hljs-keyword">var</span> p = performance.timing.requestStart;
+            <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&quot;load&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                <span class="hljs-keyword">var</span> e = performance.timing.domContentLoadedEventEnd;
+                n.track(<span class="hljs-string">&quot;page.view&quot;</span>, {loaded_time: e - p})
+            }, !<span class="hljs-number">1</span>)
+        }
+        <span class="hljs-keyword">return</span> n
+    }
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+<span class="hljs-meta">    &quot;use strict&quot;</span>;
+    <span class="hljs-keyword">var</span> r = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n, r</span>) </span>{
+        <span class="hljs-keyword">this</span>.sdk = e, <span class="hljs-keyword">this</span>.player = t, <span class="hljs-keyword">this</span>.res = <span class="hljs-keyword">this</span>.player.querySelectorAll(<span class="hljs-string">&quot;source&quot;</span>), <span class="hljs-keyword">this</span>.config = <span class="hljs-keyword">this</span>.initConfig(n), <span class="hljs-keyword">this</span>.playerCount = <span class="hljs-number">0</span>, <span class="hljs-keyword">this</span>.playingEvent = !<span class="hljs-number">1</span>, <span class="hljs-keyword">this</span>.callback = r, <span class="hljs-keyword">this</span>.current = [], <span class="hljs-keyword">this</span>.eventList = {}, <span class="hljs-keyword">this</span>.init()
+    };
+    r.prototype = {
+        video: {
+            loaded: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                <span class="hljs-keyword">this</span>.track(<span class="hljs-string">&quot;video.loaded&quot;</span>, {})
+            }, played: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+                <span class="hljs-keyword">this</span>.playing(), <span class="hljs-keyword">this</span>.track(<span class="hljs-string">&quot;video.played&quot;</span>, {is_first_play: e})
+            }, paused: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                <span class="hljs-keyword">this</span>.stopPlaying(), clearInterval(<span class="hljs-keyword">this</span>.playing), <span class="hljs-keyword">this</span>.track(<span class="hljs-string">&quot;video.paused&quot;</span>, {})
+            }, stoped: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                <span class="hljs-keyword">this</span>.stopPlaying(), <span class="hljs-keyword">this</span>.track(<span class="hljs-string">&quot;video.stoped&quot;</span>, {})
+            }, seeked: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t</span>) </span>{
+                <span class="hljs-keyword">this</span>.track(<span class="hljs-string">&quot;video.seeked&quot;</span>, {position: e, to_position: t})
+            }, playing: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                <span class="hljs-keyword">this</span>.track(<span class="hljs-string">&quot;video.playing&quot;</span>, {})
+            }, interrupted: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+                <span class="hljs-keyword">this</span>.stopPlaying(), <span class="hljs-keyword">this</span>.track(<span class="hljs-string">&quot;video.interrupted&quot;</span>, {method: e})
+            }
+        }, init: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">this</span>.ready(), <span class="hljs-keyword">this</span>.timeupdate(), <span class="hljs-keyword">this</span>.start(), <span class="hljs-keyword">this</span>.volumechange(), <span class="hljs-keyword">this</span>.stop(), <span class="hljs-keyword">this</span>.seeked(), <span class="hljs-keyword">this</span>.pause(), <span class="hljs-keyword">this</span>.fullscreen(), <span class="hljs-keyword">this</span>.playerror(), <span class="hljs-keyword">this</span>.leave(), <span class="hljs-keyword">this</span>.destroy(), <span class="hljs-keyword">this</span>.setup()
+        }, status: {ready: !<span class="hljs-number">1</span>, stop: !<span class="hljs-number">1</span>, pause: !<span class="hljs-number">1</span>, play: !<span class="hljs-number">1</span>}, track: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t</span>) </span>{
+            <span class="hljs-keyword">var</span> n = <span class="hljs-keyword">this</span>.sdk;
+            t = <span class="hljs-keyword">this</span>.sdk.utils.extend({}, <span class="hljs-keyword">this</span>.config, {position: <span class="hljs-keyword">this</span>.player.currentTime}, t), n.track(e, t, <span class="hljs-keyword">this</span>.callback)
+        }, initConfig: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+            <span class="hljs-keyword">var</span> t = {session_id: <span class="hljs-keyword">this</span>.sdk.utils.uuid.v4(), video_length: <span class="hljs-number">0</span>, position: <span class="hljs-number">0</span>, is_fullscreen: !<span class="hljs-number">1</span>};
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.sdk.utils.extend({}, t, e)
+        }, ready: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> e = <span class="hljs-keyword">this</span>, t = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                e.config.video_id = e.config.video_id || e.player.currentSrc, e.config.sound = <span class="hljs-number">100</span> * e.player.volume, e.config.video_length = e.player.duration, e.player.muted &amp;&amp; (e.config.sound = <span class="hljs-number">0</span>), e.current = [e.player.currentTime, e.player.currentTime], e.video.loaded.call(e)
+            };
+            <span class="hljs-keyword">this</span>.eventList.loadeddata = {dom: <span class="hljs-keyword">this</span>.player, event: t}
+        }, timeupdate: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> e = <span class="hljs-keyword">this</span>, t = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">t</span>) </span>{
+                e.current.push(e.player.currentTime), e.current.shift()
+            };
+            <span class="hljs-keyword">this</span>.eventList.timeupdate = {dom: <span class="hljs-keyword">this</span>.player, event: t}
+        }, start: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> e = <span class="hljs-keyword">this</span>, t = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">t</span>) </span>{
+                e.player.seeking || (e.playerCount++, e.video.played.call(e, <span class="hljs-number">1</span> === e.playerCount))
+            };
+            <span class="hljs-keyword">this</span>.eventList.play = {dom: <span class="hljs-keyword">this</span>.player, event: t}
+        }, volumechange: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> e = <span class="hljs-keyword">this</span>, t = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">t</span>) </span>{
+                e.config.sound = <span class="hljs-number">100</span> * e.player.volume, e.player.muted &amp;&amp; (e.config.sound = <span class="hljs-number">0</span>)
+            };
+            <span class="hljs-keyword">this</span>.eventList.volumechange = {dom: <span class="hljs-keyword">this</span>.player, event: t}
+        }, stop: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> e = <span class="hljs-keyword">this</span>, t = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">t</span>) </span>{
+                e.video.stoped.call(e)
+            };
+            <span class="hljs-keyword">this</span>.eventList.ended = {dom: <span class="hljs-keyword">this</span>.player, event: t}
+        }, seeked: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> e = <span class="hljs-keyword">this</span>, t = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">t</span>) </span>{
+                e.seeking = {play: [e.current[<span class="hljs-number">0</span>], e.current[<span class="hljs-number">1</span>]], stop: [e.current[<span class="hljs-number">1</span>], e.player.currentTime]}
+            }, n = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">t</span>) </span>{
+                <span class="hljs-keyword">var</span> n = e.player.paused ? e.seeking.stop : e.seeking.play;
+                e.video.seeked.call(e, n[<span class="hljs-number">0</span>], n[<span class="hljs-number">1</span>])
+            };
+            <span class="hljs-keyword">this</span>.eventList.seeking = {dom: <span class="hljs-keyword">this</span>.player, event: t}, <span class="hljs-keyword">this</span>.eventList.seeked = {dom: <span class="hljs-keyword">this</span>.player, event: n}
+        }, pause: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> e = <span class="hljs-keyword">this</span>, t = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">t</span>) </span>{
+                e.player.seeking || e.player.ended || e.video.paused.call(e)
+            };
+            <span class="hljs-keyword">this</span>.eventList.pause = {dom: <span class="hljs-keyword">this</span>.player, event: t}
+        }, fullscreen: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> e = <span class="hljs-keyword">this</span>, t = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">t</span>) </span>{
+                e.config.is_fullscreen = <span class="hljs-built_in">document</span>[e.prefix + <span class="hljs-string">&quot;IsFullScreen&quot;</span>]
+            };
+            <span class="hljs-keyword">this</span>.eventList[<span class="hljs-keyword">this</span>.prefix + <span class="hljs-string">&quot;fullscreenchange&quot;</span>] = {dom: <span class="hljs-built_in">document</span>, event: t}
+        }, playing: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> e = <span class="hljs-keyword">this</span>;
+            <span class="hljs-keyword">this</span>.playingEvent = setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                e.video.playing.call(e)
+            }, <span class="hljs-number">1e4</span>)
+        }, stopPlaying: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            clearInterval(<span class="hljs-keyword">this</span>.playingEvent)
+        }, playerror: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> e = <span class="hljs-keyword">this</span>, t = <span class="hljs-keyword">this</span>.player.src ? <span class="hljs-keyword">this</span>.player : <span class="hljs-keyword">this</span>.res.length ? <span class="hljs-keyword">this</span>.res[<span class="hljs-keyword">this</span>.res.length - <span class="hljs-number">1</span>] : <span class="hljs-literal">null</span>,
+                n = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">t</span>) </span>{
+                    e.video.interrupted.call(e, <span class="hljs-string">&quot;&#x7459;&#x55DB;&#xE576;&#x74A7;&#x52EC;&#x7C2E;&#x6D93;&#x5D85;&#x5F72;&#x9422;&#xFFFD;&quot;</span>)
+                }, r = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">t</span>) </span>{
+                    e.video.interrupted.call(e, <span class="hljs-string">&quot;&#x7459;&#x55DB;&#xE576;&#x74A7;&#x52EC;&#x7C2E;&#x6D93;&#x8679;&#x2516;&quot;</span>)
+                };
+            t &amp;&amp; (<span class="hljs-keyword">this</span>.eventList.error = {dom: t, event: n}), <span class="hljs-keyword">this</span>.eventList.emptied = {dom: <span class="hljs-keyword">this</span>.player, event: r}
+        }, leave: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> e = <span class="hljs-keyword">this</span>, t = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">t</span>) </span>{
+                e.config.position = e.player.currentTime, e.video.interrupted.call(e, <span class="hljs-string">&quot;&#x7EC2;&#x8BF2;&#x7D11;&#x6924;&#x7538;&#x6F70;&quot;</span>)
+            };
+            <span class="hljs-keyword">this</span>.eventList.unload = {dom: <span class="hljs-built_in">window</span>, event: t}
+        }, setup: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> e <span class="hljs-keyword">in</span> <span class="hljs-keyword">this</span>.eventList) {
+                <span class="hljs-keyword">var</span> t = <span class="hljs-keyword">this</span>.eventList[e];
+                t.dom.addEventListener(e, t.event, !<span class="hljs-number">1</span>)
+            }
+        }, destroy: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">this</span>.stopPlaying();
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> e <span class="hljs-keyword">in</span> <span class="hljs-keyword">this</span>.eventList) {
+                <span class="hljs-keyword">var</span> t = <span class="hljs-keyword">this</span>.eventList[e];
+                t.dom.removeEventListener(e, t.event, !<span class="hljs-number">1</span>)
+            }
+        }, prefix: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> e = <span class="hljs-built_in">window</span>.getComputedStyle(<span class="hljs-built_in">document</span>.documentElement, <span class="hljs-string">&quot;&quot;</span>);
+            <span class="hljs-keyword">return</span> (<span class="hljs-built_in">Array</span>.prototype.slice.call(e).join(<span class="hljs-string">&quot;&quot;</span>).match(<span class="hljs-regexp">/-(moz|webkit|ms)-/</span>) || <span class="hljs-string">&quot;&quot;</span> === e.OLink &amp;&amp; [<span class="hljs-string">&quot;&quot;</span>, <span class="hljs-string">&quot;o&quot;</span>])[<span class="hljs-number">1</span>]
+        }()
+    }, e.exports = r
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+<span class="hljs-meta">    &quot;use strict&quot;</span>;
+    <span class="hljs-keyword">var</span> r = n(<span class="hljs-number">4</span>), i = n(<span class="hljs-number">1</span>), o = n(<span class="hljs-number">0</span>), a = n(<span class="hljs-number">3</span>);
+    e.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">t, n, s</span>) </span>{
+            <span class="hljs-keyword">var</span> u = o({properties: n, model: t, type: <span class="hljs-string">&quot;model&quot;</span>, context: o(a, e.context)}, i.getId());
+            r({
+                url: e.postUrl + <span class="hljs-string">&quot;/model&quot;</span>, data: u, type: <span class="hljs-string">&quot;post&quot;</span>, apiKey: e.apiKey, done: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t</span>) </span>{
+                    s &amp;&amp; s(<span class="hljs-literal">null</span>, e, t)
+                }, error: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+                    s &amp;&amp; s(e)
+                }
+            })
+        }
+    }
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+<span class="hljs-meta">    &quot;use strict&quot;</span>;
+    <span class="hljs-keyword">var</span> r = n(<span class="hljs-number">4</span>), i = n(<span class="hljs-number">1</span>), o = n(<span class="hljs-number">0</span>), a = n(<span class="hljs-number">3</span>);
+    e.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">t, n, s</span>) </span>{
+            <span class="hljs-keyword">var</span> u = o({properties: n, event: t, type: <span class="hljs-string">&quot;track&quot;</span>, context: o(a, e.context)}, i.getId());
+            r({
+                url: e.postUrl + <span class="hljs-string">&quot;/track&quot;</span>, data: u, type: <span class="hljs-string">&quot;post&quot;</span>, apiKey: e.apiKey, done: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t</span>) </span>{
+                    s &amp;&amp; s(<span class="hljs-literal">null</span>, e, t)
+                }, error: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+                    s &amp;&amp; s(e)
+                }
+            })
+        }
+    }
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+<span class="hljs-meta">    &quot;use strict&quot;</span>;
+    e.exports = {
+        getTypeof: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.prototype.toString.call(e)
+        }, isPlainObject: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;[object Object]&quot;</span> === <span class="hljs-keyword">this</span>.getTypeof(e)
+        }
+    }
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+<span class="hljs-meta">    &quot;use strict&quot;</span>;
+    !<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+        <span class="hljs-keyword">var</span> t, n = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        }, r = e.document, i = {set: n, get: n, remove: n, clear: n, each: n, obj: n, length: <span class="hljs-number">0</span>};
+        !<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">if</span> (<span class="hljs-string">&quot;localStorage&quot;</span> <span class="hljs-keyword">in</span> e) <span class="hljs-keyword">try</span> {
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">void</span> (t = e.localStorage)
+            } <span class="hljs-keyword">catch</span> (e) {
+            }
+            <span class="hljs-keyword">var</span> n, i, o = r.getElementsByTagName(<span class="hljs-string">&quot;head&quot;</span>)[<span class="hljs-number">0</span>], a = e.location.hostname || <span class="hljs-string">&quot;localStorage&quot;</span>, s = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>;
+            <span class="hljs-keyword">if</span> (o.addBehavior) {
+                <span class="hljs-keyword">try</span> {
+                    i = <span class="hljs-keyword">new</span> ActiveXObject(<span class="hljs-string">&quot;htmlfile&quot;</span>), i.open(), i.write(<span class="hljs-string">&apos;&lt;script&gt;document.w=window;&lt;\/script&gt;&lt;iframe src=&quot;/favicon.ico&quot;&gt;&lt;/iframe&gt;&apos;</span>), i.close(), n = i.w.frames[<span class="hljs-number">0</span>].document, o = n.createElement(<span class="hljs-string">&quot;head&quot;</span>), n.appendChild(o)
+                } <span class="hljs-keyword">catch</span> (e) {
+                    o = r.getElementsByTagName(<span class="hljs-string">&quot;head&quot;</span>)[<span class="hljs-number">0</span>]
+                }
+                <span class="hljs-keyword">try</span> {
+                    s.setDate(s.getDate() + <span class="hljs-number">36500</span>), o.addBehavior(<span class="hljs-string">&quot;#default#userData&quot;</span>), o.expires = s.toUTCString(), o.load(a), o.save(a)
+                } <span class="hljs-keyword">catch</span> (e) {
+                    <span class="hljs-keyword">return</span>
+                }
+                <span class="hljs-keyword">var</span> u, c;
+                <span class="hljs-keyword">try</span> {
+                    u = o.XMLDocument.documentElement, c = u.attributes
+                } <span class="hljs-keyword">catch</span> (e) {
+                    <span class="hljs-keyword">return</span>
+                }
+                <span class="hljs-keyword">var</span> l = <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">&quot;^p__hack_&quot;</span>), d = <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">&quot;m-_-c&quot;</span>, <span class="hljs-string">&quot;g&quot;</span>), p = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+                    <span class="hljs-keyword">return</span> <span class="hljs-built_in">encodeURIComponent</span>(<span class="hljs-string">&quot;p__hack_&quot;</span> + e).replace(<span class="hljs-regexp">/%/g</span>, <span class="hljs-string">&quot;m-_-c&quot;</span>)
+                }, f = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+                    <span class="hljs-keyword">return</span> <span class="hljs-built_in">decodeURIComponent</span>(e.replace(d, <span class="hljs-string">&quot;%&quot;</span>)).replace(l, <span class="hljs-string">&quot;&quot;</span>)
+                };
+                t = {
+                    length: c.length, isVirtualObject: !<span class="hljs-number">0</span>, getItem: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+                        <span class="hljs-keyword">return</span> (c.getNamedItem(p(e)) || {nodeValue: <span class="hljs-literal">null</span>}).nodeValue || u.getAttribute(p(e))
+                    }, setItem: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t</span>) </span>{
+                        <span class="hljs-keyword">try</span> {
+                            u.setAttribute(p(e), t), o.save(a), <span class="hljs-keyword">this</span>.length = c.length
+                        } <span class="hljs-keyword">catch</span> (e) {
+                        }
+                    }, removeItem: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+                        <span class="hljs-keyword">try</span> {
+                            u.removeAttribute(p(e)), o.save(a), <span class="hljs-keyword">this</span>.length = c.length
+                        } <span class="hljs-keyword">catch</span> (e) {
+                        }
+                    }, clear: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                        <span class="hljs-keyword">for</span> (; c.length;) <span class="hljs-keyword">this</span>.removeItem(c[<span class="hljs-number">0</span>].nodeName);
+                        <span class="hljs-keyword">this</span>.length = <span class="hljs-number">0</span>
+                    }, key: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+                        <span class="hljs-keyword">return</span> c[e] ? f(c[e].nodeName) : <span class="hljs-keyword">void</span> <span class="hljs-number">0</span>
+                    }
+                }, <span class="hljs-string">&quot;localStorage&quot;</span> <span class="hljs-keyword">in</span> e || (e.localStorage = t)
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">try</span> {
+                t = e.localStorage
+            } <span class="hljs-keyword">catch</span> (e) {
+                t = <span class="hljs-literal">null</span>
+            }
+        }(), e.LS = t ? {
+            set: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, n</span>) </span>{
+                <span class="hljs-keyword">void</span> <span class="hljs-number">0</span> !== <span class="hljs-keyword">this</span>.get(e) &amp;&amp; <span class="hljs-keyword">this</span>.remove(e), t.setItem(e, n), <span class="hljs-keyword">this</span>.length = t.length
+            }, get: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+                <span class="hljs-keyword">var</span> n = t.getItem(e);
+                <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span> === n ? <span class="hljs-keyword">void</span> <span class="hljs-number">0</span> : n
+            }, remove: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+                t.removeItem(e), <span class="hljs-keyword">this</span>.length = t.length
+            }, clear: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                t.clear(), <span class="hljs-keyword">this</span>.length = <span class="hljs-number">0</span>
+            }, each: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+                <span class="hljs-keyword">var</span> t, n = <span class="hljs-keyword">this</span>.obj(), r = e || <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                };
+                <span class="hljs-keyword">for</span> (t <span class="hljs-keyword">in</span> n) <span class="hljs-keyword">if</span> (!<span class="hljs-number">1</span> === r.call(<span class="hljs-keyword">this</span>, t, <span class="hljs-keyword">this</span>.get(t))) <span class="hljs-keyword">break</span>
+            }, obj: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                <span class="hljs-keyword">var</span> e, n, r = {}, i = <span class="hljs-number">0</span>;
+                <span class="hljs-keyword">if</span> (t.isVirtualObject) r = t.key(<span class="hljs-number">-1</span>); <span class="hljs-keyword">else</span> <span class="hljs-keyword">for</span> (e = t.length; i &lt; e; i++) n = t.key(i), r[n] = <span class="hljs-keyword">this</span>.get(n);
+                <span class="hljs-keyword">return</span> r
+            }, length: t.length
+        } : i, e.jQuery &amp;&amp; (e.jQuery.LS = e.LS)
+    }(<span class="hljs-built_in">window</span>)
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+<span class="hljs-meta">    &quot;use strict&quot;</span>;
+    <span class="hljs-keyword">var</span> r = <span class="hljs-built_in">window</span>.location;
+    e.exports = {
+        get: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+            <span class="hljs-keyword">var</span> t = <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">&quot;[?&amp;]&quot;</span> + e + <span class="hljs-string">&quot;=([^&amp;]*)&quot;</span>).exec(r.search);
+            <span class="hljs-keyword">return</span> t &amp;&amp; <span class="hljs-built_in">decodeURIComponent</span>(t[<span class="hljs-number">1</span>].replace(<span class="hljs-regexp">/\+/g</span>, <span class="hljs-string">&quot; &quot;</span>))
+        }
+    }
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+<span class="hljs-meta">    &quot;use strict&quot;</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">r</span>(<span class="hljs-params">e, t</span>) </span>{
+        <span class="hljs-keyword">if</span> (!(e <span class="hljs-keyword">instanceof</span> t)) <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">&quot;Cannot call a class as a function&quot;</span>)
+    }
+
+    <span class="hljs-keyword">var</span> i = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">e</span>(<span class="hljs-params">e, t</span>) </span>{
+                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> n = <span class="hljs-number">0</span>; n &lt; t.length; n++) {
+                    <span class="hljs-keyword">var</span> r = t[n];
+                    r.enumerable = r.enumerable || !<span class="hljs-number">1</span>, r.configurable = !<span class="hljs-number">0</span>, <span class="hljs-string">&quot;value&quot;</span> <span class="hljs-keyword">in</span> r &amp;&amp; (r.writable = !<span class="hljs-number">0</span>), <span class="hljs-built_in">Object</span>.defineProperty(e, r.key, r)
+                }
+            }
+
+            <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">t, n, r</span>) </span>{
+                <span class="hljs-keyword">return</span> n &amp;&amp; e(t.prototype, n), r &amp;&amp; e(t, r), t
+            }
+        }(),
+        o = [<span class="hljs-string">&quot;Baiduspider&quot;</span>, <span class="hljs-string">&quot;Googlebot&quot;</span>, <span class="hljs-string">&quot;360Spider&quot;</span>, <span class="hljs-string">&quot;haosouspider&quot;</span>, <span class="hljs-string">&quot;YodaoBot&quot;</span>, <span class="hljs-string">&quot;YoudaoBot&quot;</span>, <span class="hljs-string">&quot;Sosospider&quot;</span>, <span class="hljs-string">&quot;Yahoo! Slurp&quot;</span>, <span class="hljs-string">&quot;msnbot&quot;</span>, <span class="hljs-string">&quot;bingbot&quot;</span>, <span class="hljs-string">&quot;ia_archiver&quot;</span>, <span class="hljs-string">&quot;Yisouspider&quot;</span>],
+        a = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">e</span>(<span class="hljs-params"></span>) </span>{
+                r(<span class="hljs-keyword">this</span>, e), <span class="hljs-keyword">this</span>.UA = <span class="hljs-built_in">window</span>.navigator.userAgent
+            }
+
+            <span class="hljs-keyword">return</span> i(e, [{
+                key: <span class="hljs-string">&quot;isSpider&quot;</span>, value: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> e = !<span class="hljs-number">1</span>, t = <span class="hljs-number">0</span>; t &lt; o.length; t++) <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.UA.indexOf(o[t]) &gt; <span class="hljs-number">-1</span>) {
+                        e = !<span class="hljs-number">0</span>;
+                        <span class="hljs-keyword">break</span>
+                    }
+                    <span class="hljs-keyword">return</span> e
+                }
+            }]), e
+        }();
+    e.exports = <span class="hljs-keyword">new</span> a
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+<span class="hljs-meta">    &quot;use strict&quot;</span>;
+    <span class="hljs-keyword">var</span> r = n(<span class="hljs-number">13</span>), i = [];
+    e.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> o = <span class="hljs-built_in">document</span>.querySelector(e), a = <span class="hljs-number">0</span>; a &lt; i.length; a++) <span class="hljs-keyword">if</span> (i[a].player === o) {
+                i[a].destroy(), i.splice(a, <span class="hljs-number">1</span>);
+                <span class="hljs-keyword">break</span>
+            }
+            i.push(<span class="hljs-keyword">new</span> r(<span class="hljs-keyword">this</span>, o, t || {}, n))
+        }
+    }
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+<span class="hljs-meta">    &quot;use strict&quot;</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">r</span>(<span class="hljs-params">e, t</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.prototype.hasOwnProperty.call(e, t)
+    }
+
+    e.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n, o</span>) </span>{
+        t = t || <span class="hljs-string">&quot;&amp;&quot;</span>, n = n || <span class="hljs-string">&quot;=&quot;</span>;
+        <span class="hljs-keyword">var</span> a = {};
+        <span class="hljs-keyword">if</span> (<span class="hljs-string">&quot;string&quot;</span> != <span class="hljs-keyword">typeof</span> e || <span class="hljs-number">0</span> === e.length) <span class="hljs-keyword">return</span> a;
+        <span class="hljs-keyword">var</span> s = <span class="hljs-regexp">/\+/g</span>;
+        e = e.split(t);
+        <span class="hljs-keyword">var</span> u = <span class="hljs-number">1e3</span>;
+        o &amp;&amp; <span class="hljs-string">&quot;number&quot;</span> == <span class="hljs-keyword">typeof</span> o.maxKeys &amp;&amp; (u = o.maxKeys);
+        <span class="hljs-keyword">var</span> c = e.length;
+        u &gt; <span class="hljs-number">0</span> &amp;&amp; c &gt; u &amp;&amp; (c = u);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> l = <span class="hljs-number">0</span>; l &lt; c; ++l) {
+            <span class="hljs-keyword">var</span> d, p, f, v, h = e[l].replace(s, <span class="hljs-string">&quot;%20&quot;</span>), y = h.indexOf(n);
+            y &gt;= <span class="hljs-number">0</span> ? (d = h.substr(<span class="hljs-number">0</span>, y), p = h.substr(y + <span class="hljs-number">1</span>)) : (d = h, p = <span class="hljs-string">&quot;&quot;</span>), f = <span class="hljs-built_in">decodeURIComponent</span>(d), v = <span class="hljs-built_in">decodeURIComponent</span>(p), r(a, f) ? i(a[f]) ? a[f].push(v) : a[f] = [a[f], v] : a[f] = v
+        }
+        <span class="hljs-keyword">return</span> a
+    };
+    <span class="hljs-keyword">var</span> i = <span class="hljs-built_in">Array</span>.isArray || <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;[object Array]&quot;</span> === <span class="hljs-built_in">Object</span>.prototype.toString.call(e)
+    }
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+<span class="hljs-meta">    &quot;use strict&quot;</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">r</span>(<span class="hljs-params">e, t</span>) </span>{
+        <span class="hljs-keyword">if</span> (e.map) <span class="hljs-keyword">return</span> e.map(t);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> n = [], r = <span class="hljs-number">0</span>; r &lt; e.length; r++) n.push(t(e[r], r));
+        <span class="hljs-keyword">return</span> n
+    }
+
+    <span class="hljs-keyword">var</span> i = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+        <span class="hljs-keyword">switch</span> (<span class="hljs-keyword">typeof</span> e) {
+            <span class="hljs-keyword">case</span><span class="hljs-string">&quot;string&quot;</span>:
+                <span class="hljs-keyword">return</span> e;
+            <span class="hljs-keyword">case</span><span class="hljs-string">&quot;boolean&quot;</span>:
+                <span class="hljs-keyword">return</span> e ? <span class="hljs-string">&quot;true&quot;</span> : <span class="hljs-string">&quot;false&quot;</span>;
+            <span class="hljs-keyword">case</span><span class="hljs-string">&quot;number&quot;</span>:
+                <span class="hljs-keyword">return</span> <span class="hljs-built_in">isFinite</span>(e) ? e : <span class="hljs-string">&quot;&quot;</span>;
+            <span class="hljs-keyword">default</span>:
+                <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span>
+        }
+    };
+    e.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n, s</span>) </span>{
+        <span class="hljs-keyword">return</span> t = t || <span class="hljs-string">&quot;&amp;&quot;</span>, n = n || <span class="hljs-string">&quot;=&quot;</span>, <span class="hljs-literal">null</span> === e &amp;&amp; (e = <span class="hljs-keyword">void</span> <span class="hljs-number">0</span>), <span class="hljs-string">&quot;object&quot;</span> == <span class="hljs-keyword">typeof</span> e ? r(a(e), <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">a</span>) </span>{
+            <span class="hljs-keyword">var</span> s = <span class="hljs-built_in">encodeURIComponent</span>(i(a)) + n;
+            <span class="hljs-keyword">return</span> o(e[a]) ? r(e[a], <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+                <span class="hljs-keyword">return</span> s + <span class="hljs-built_in">encodeURIComponent</span>(i(e))
+            }).join(t) : s + <span class="hljs-built_in">encodeURIComponent</span>(i(e[a]))
+        }).join(t) : s ? <span class="hljs-built_in">encodeURIComponent</span>(i(s)) + n + <span class="hljs-built_in">encodeURIComponent</span>(i(e)) : <span class="hljs-string">&quot;&quot;</span>
+    };
+    <span class="hljs-keyword">var</span> o = <span class="hljs-built_in">Array</span>.isArray || <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;[object Array]&quot;</span> === <span class="hljs-built_in">Object</span>.prototype.toString.call(e)
+    }, a = <span class="hljs-built_in">Object</span>.keys || <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+        <span class="hljs-keyword">var</span> t = [];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> n <span class="hljs-keyword">in</span> e) <span class="hljs-built_in">Object</span>.prototype.hasOwnProperty.call(e, n) &amp;&amp; t.push(n);
+        <span class="hljs-keyword">return</span> t
+    }
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+<span class="hljs-meta">    &quot;use strict&quot;</span>;
+    t.decode = t.parse = n(<span class="hljs-number">21</span>), t.encode = t.stringify = n(<span class="hljs-number">22</span>)
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+    <span class="hljs-keyword">var</span> r = n(<span class="hljs-number">25</span>), i = n(<span class="hljs-number">9</span>), o = i;
+    o.v1 = r, o.v4 = i, e.exports = o
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">r</span>(<span class="hljs-params">e, t, n</span>) </span>{
+        <span class="hljs-keyword">var</span> r = t &amp;&amp; n || <span class="hljs-number">0</span>, l = t || [];
+        e = e || {};
+        <span class="hljs-keyword">var</span> d = e.node || i, p = <span class="hljs-keyword">void</span> <span class="hljs-number">0</span> !== e.clockseq ? e.clockseq : o;
+        <span class="hljs-keyword">if</span> (<span class="hljs-literal">null</span> == d || <span class="hljs-literal">null</span> == p) {
+            <span class="hljs-keyword">var</span> f = a();
+            <span class="hljs-literal">null</span> == d &amp;&amp; (d = i = [<span class="hljs-number">1</span> | f[<span class="hljs-number">0</span>], f[<span class="hljs-number">1</span>], f[<span class="hljs-number">2</span>], f[<span class="hljs-number">3</span>], f[<span class="hljs-number">4</span>], f[<span class="hljs-number">5</span>]]), <span class="hljs-literal">null</span> == p &amp;&amp; (p = o = <span class="hljs-number">16383</span> &amp; (f[<span class="hljs-number">6</span>] &lt;&lt; <span class="hljs-number">8</span> | f[<span class="hljs-number">7</span>]))
+        }
+        <span class="hljs-keyword">var</span> v = <span class="hljs-keyword">void</span> <span class="hljs-number">0</span> !== e.msecs ? e.msecs : (<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>).getTime(), h = <span class="hljs-keyword">void</span> <span class="hljs-number">0</span> !== e.nsecs ? e.nsecs : c + <span class="hljs-number">1</span>,
+            y = v - u + (h - c) / <span class="hljs-number">1e4</span>;
+        <span class="hljs-keyword">if</span> (y &lt; <span class="hljs-number">0</span> &amp;&amp; <span class="hljs-keyword">void</span> <span class="hljs-number">0</span> === e.clockseq &amp;&amp; (p = p + <span class="hljs-number">1</span> &amp; <span class="hljs-number">16383</span>), (y &lt; <span class="hljs-number">0</span> || v &gt; u) &amp;&amp; <span class="hljs-keyword">void</span> <span class="hljs-number">0</span> === e.nsecs &amp;&amp; (h = <span class="hljs-number">0</span>), h &gt;= <span class="hljs-number">1e4</span>) <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&quot;uuid.v1(): Can&apos;t create more than 10M uuids/sec&quot;</span>);
+        u = v, c = h, o = p, v += <span class="hljs-number">122192928e5</span>;
+        <span class="hljs-keyword">var</span> g = (<span class="hljs-number">1e4</span> * (<span class="hljs-number">268435455</span> &amp; v) + h) % <span class="hljs-number">4294967296</span>;
+        l[r++] = g &gt;&gt;&gt; <span class="hljs-number">24</span> &amp; <span class="hljs-number">255</span>, l[r++] = g &gt;&gt;&gt; <span class="hljs-number">16</span> &amp; <span class="hljs-number">255</span>, l[r++] = g &gt;&gt;&gt; <span class="hljs-number">8</span> &amp; <span class="hljs-number">255</span>, l[r++] = <span class="hljs-number">255</span> &amp; g;
+        <span class="hljs-keyword">var</span> m = v / <span class="hljs-number">4294967296</span> * <span class="hljs-number">1e4</span> &amp; <span class="hljs-number">268435455</span>;
+        l[r++] = m &gt;&gt;&gt; <span class="hljs-number">8</span> &amp; <span class="hljs-number">255</span>, l[r++] = <span class="hljs-number">255</span> &amp; m, l[r++] = m &gt;&gt;&gt; <span class="hljs-number">24</span> &amp; <span class="hljs-number">15</span> | <span class="hljs-number">16</span>, l[r++] = m &gt;&gt;&gt; <span class="hljs-number">16</span> &amp; <span class="hljs-number">255</span>, l[r++] = p &gt;&gt;&gt; <span class="hljs-number">8</span> | <span class="hljs-number">128</span>, l[r++] = <span class="hljs-number">255</span> &amp; p;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> w = <span class="hljs-number">0</span>; w &lt; <span class="hljs-number">6</span>; ++w) l[r + w] = d[w];
+        <span class="hljs-keyword">return</span> t || s(l)
+    }
+
+    <span class="hljs-keyword">var</span> i, o, a = n(<span class="hljs-number">8</span>), s = n(<span class="hljs-number">7</span>), u = <span class="hljs-number">0</span>, c = <span class="hljs-number">0</span>;
+    e.exports = r
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e, t, n</span>) </span>{
+    n(<span class="hljs-number">2</span>), e.exports = n(<span class="hljs-number">2</span>)
+}]);
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 简介">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="JsSDK使用方法.html" class="navigation navigation-next " aria-label="Next page: javacript 数据埋点使用方法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"javacript 数据埋点文档","level":"1.2","depth":1,"next":{"title":"javacript 数据埋点使用方法","level":"1.3","depth":1,"path":"DataEmbedPoint/JsSDK使用方法.md","ref":"DataEmbedPoint/JsSDK使用方法.md","articles":[]},"previous":{"title":"简介","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toc2","expandable-chapters"],"pluginsConfig":{"toc":{"addClass":true,"className":"toc"},"search":{},"toc2":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"DataEmbedPoint/JsSDK内容.md","mtime":"2019-08-16T01:15:23.453Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-16T01:27:06.646Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toc2/toc2.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
